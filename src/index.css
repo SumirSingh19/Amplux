@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Orbitron&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-slide {
+    gap: 10px;
+}
+
+.rounded-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 0.5em;
+    border: 1px solid black;
+    position: relative;
+  }
+  
+  @media (max-width: 767.98px) {
+    .rounded-checkbox {
+      width: .5em;
+      height: .5em;
+    }
+  }
+  
+  .rounded-checkbox:checked {
+    background-color: transparent;
+  }
+  
+  .rounded-checkbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  @media (max-width: 767.98px) {
+    .rounded-checkbox::before {
+      width: .2em;
+      height: .2em;
+    }
+  }
+  
+  .rounded-checkbox:checked::before {
+    background-color: black;
+  }
+  
+  /* Animation effect for the filled circle */
+  .rounded-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    background-color: #5C5C5C;
+    transition: width 0.3s ease, height 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  @media (max-width: 767.98px) {
+    .rounded-checkbox::after {
+      width: .2em;
+      height: .2em;
+    }
+  }
+  
+  /* Additional CSS to remove animation effect from previously selected checkbox */
+  .rounded-checkbox:not(:checked) + .rounded-checkbox::after {
+    width: 0; /* Set width to 0 to hide the filled circle */
+    height: 0; /* Set height to 0 to hide the filled circle */
+  }
