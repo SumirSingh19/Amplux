@@ -1,6 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const Contact = () => {
+
+    useEffect(() => {
+        Aos.init({duration: 2000});
+      }, []);
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -24,16 +31,24 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[#eae8e8] p-6 pl-60 font-abel">
-            <div className="mb-6 txt-left">
-                <div className='w-7/12 tracking-widest'>
-                    <span className="text-7xl font-normal">
+        <div className="flex flex-col bg-[#eae8e8] p-6 font-abel">
+            <div className="mb-6 txt-left"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0">
+                <div className='w-10/12 tracking-widest'>
+                    <span className="text-9xl">
                         Ready to take things to the next level? Get in touch!
                     </span>
                 </div>
                 
             </div>
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-md"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className='flex gap-4'>
                         <div>
@@ -97,13 +112,14 @@ const Contact = () => {
                             className="rounded-checkbox"
                         />
                         <label htmlFor="agreement" className="ml-2 text-sm">
-                            I have read and accept the <span className='underline'>privacy policy</span>
+                            I have read and accept the <span className='underline cursor-pointer'>privacy policy</span>
                         </label>
                     </div>
                     <div>
                         <button
                             type="submit"
-                            className="w-[10rem] p-2 bg-[#626365] text-white rounded-full hover:bg-[#717275] focus:outline-none focus:ring-2 focus:ring-[#626365]"
+                            className="w-[10rem] p-2 bg-[#626365] text-white rounded-full hover:bg-[#717275] focus:outline-none focus:ring-2 focus:ring-[#626365]
+                            hover:text-white hover:shadow-[inset_14rem_0_0_0] hover:shadow-slate-400 duration-[400ms,700ms] transition-shadow"
                         >
                             Send
                         </button>

@@ -1,6 +1,5 @@
 import Contact from "./Contact";
 import Featured from "./Featured";
-import Footer from "./Footer";
 import InnovativeFeatures from "./InnovativeFeatures";
 import Intro from "./Intro";
 import MadeInIndia from "./MadeInIndia";
@@ -17,7 +16,6 @@ const HomePage = () => {
             <ScreenCarousel />
             <Featured/>
             <Contact />
-            <Footer/>
         </div>
     )
 };

@@ -87,3 +87,112 @@
     width: 0; /* Set width to 0 to hide the filled circle */
     height: 0; /* Set height to 0 to hide the filled circle */
   }
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.aos-animate .slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE/Edge */
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-active {
+  opacity: 1;
+}
+
+.slide-hidden {
+  opacity: 0;
+}
+
+.slide-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Add these styles to your CSS file */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: scroll 60s linear infinite; /* Slower animation */
+}
+
+.scroll-wrapper:hover {
+  animation-play-state: paused;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+.section-link:hover {
+  animation: grow 0.3s ease-in-out forwards;
+}
+
+@keyframes grow {
+  from {
+    font-weight: normal;
+    transform: scale(1);
+  }
+  to {
+    font-weight: bold;
+    transform: scale(1.1); /* Adjust scale for desired size increase */
+  }
+}
