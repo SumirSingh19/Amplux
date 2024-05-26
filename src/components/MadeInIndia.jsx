@@ -3,7 +3,7 @@ import AMPLUX from "../assets/images/amplux1.png"
 
 const MadeInIndia = () => {
     return (
-        <div className="font-abel bg-[#eae8e8] flex flex-col items-center">
+        <div className="font-abel bg-[#f7f2f2] flex flex-col items-center">
             <div className="w-11/12 flex flex-col items-center"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom">

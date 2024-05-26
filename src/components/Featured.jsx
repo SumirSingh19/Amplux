@@ -60,7 +60,7 @@ const Featured = () => {
     ];
 
     return (
-        <div className="flex flex-col bg-[#eae8e8] font-abel pb-10">
+        <div className="flex flex-col bg-[#f7f2f2] font-abel pb-10">
             <div className="pb-20 px-8">
                 <span className="text-5xl font-light">Why choose us?</span>
             </div>

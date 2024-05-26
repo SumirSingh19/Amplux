@@ -31,7 +31,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[#eae8e8] p-6 font-abel">
+        <div className="flex flex-col bg-[#f7f2f2] p-6 font-abel">
             <div className="mb-6 txt-left"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
@@ -60,7 +60,7 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#eae8e8] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
                             />
                         </div>
                         <div>
@@ -72,7 +72,7 @@ const Contact = () => {
                                 value={formData.phone}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#eae8e8] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
                             />
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-[41rem] p-1 rounded-full border border-gray-600 bg-[#eae8e8] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                            className="w-[41rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
                         />
                     </div>
                     <div>
@@ -97,7 +97,7 @@ const Contact = () => {
                             value={formData.message}
                             onChange={handleChange}
                             required
-                            className="w-[41rem] p-1 h-40 rounded-lg border border-gray-600 bg-[#eae8e8] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                            className="w-[41rem] p-1 h-40 rounded-lg border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
                             rows="4"
                         ></textarea>
                     </div>

@@ -51,7 +51,7 @@ const ScreenCarousel = () => {
   
     return (
       <div className="overflow-hidden">
-        <div className="bg-[#eae8e8] flex flex-col font-abel items-center py-32 sticky">
+        <div className="bg-[#f7f2f2] flex flex-col font-abel items-center py-32 sticky">
                 <div className="text-center flex flex-col items-center pl-3" data-aos="zoom-in-up">
                     <div className="w-11/12 pb-5">
                         <span className="text-8xl font-light tracking-tight">Transform Any Space Into Immersive Theater</span>

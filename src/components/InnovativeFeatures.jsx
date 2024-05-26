@@ -12,7 +12,7 @@ const InnovativeFeatures = () => {
       }, []);
 
     return (
-        <div className="bg-[#eae8e8] py-8 font-abel flex flex-col pt-36">
+        <div className="bg-[#f7f2f2] py-8 font-abel flex flex-col pt-36">
             <div className="mb-8 text-left p-2 pl-9" data-aos="zoom-in-left">
                 <span className="text-6xl">Innovative Features</span>
             </div>
