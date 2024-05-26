@@ -17,7 +17,7 @@ const InnovativeFeatures = () => {
                 <span className="text-5xl">Innovative Features</span>
             </div>
             <div className="flex flex-wrap p-3 gap-8 justify-center" data-aos="zoom-in-left">
-                <div className="relative w-[29rem] h-[41rem] overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[40rem] overflow-hidden group transform transition-transform duration-700 ease-in-out hover:scale-105 cursor-pointer rounded-3xl">
                     <div 
                         className="absolute inset-0 bg-cover bg-center rounded-3xl"
                         style={{ 
@@ -30,16 +30,16 @@ const InnovativeFeatures = () => {
                         <div className="flex-grow flex items-center justify-center">
                             <span className="text-7xl font-semibold font-roboto">HDR</span>
                         </div>
-                        <div className="bg-black bg-opacity-50 px-2 h-[13rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
-                            <span className="text-4xl block px-3 pt-2 tracking-wider">Ultra-High Quality</span>
-                            <span className="text-[1.1rem] block px-3 pt-4 pb-1 tracking-wider">
+                        <div className="bg-black bg-opacity-50 px-2 h-[10rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-700 ease-in-out group-hover:translate-y-0">
+                            <span className="text-2xl block px-3 pt-4 tracking-wider uppercase">Ultra-High Quality</span>
+                            <span className="text-[0.9rem] font-light block px-3 pt-2 pb-1 tracking-wider">
                                 Our screen delivers stunning 4k ultra hd resolution, 
                                 ensuring you catch every detail with vibrant colors and unparalleled clarity.
                             </span>
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[29rem] h-[41rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[40rem] overflow-hidden group transform transition-transform duration-700 ease-in-out hover:scale-105 cursor-pointer rounded-3xl">
                     <div 
                         className="absolute inset-0 bg-cover bg-center rounded-3xl"
                         style={{ 
@@ -52,9 +52,9 @@ const InnovativeFeatures = () => {
                         <div className="flex-grow flex items-center justify-center">
                             <span className="text-7xl font-semibold font-roboto">3080Hz</span>
                         </div>
-                        <div className="bg-black bg-opacity-50 px-3 h-[13rem] py-2 w-full text-left rounded-lg transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
-                            <span className="text-4xl block px-3 pt-2 tracking-wider">Enhanced Refresh Rate</span>
-                            <span className="text-[1.1rem] block px-3 pt-4 pb-1 tracking-wider">
+                        <div className="bg-black bg-opacity-50 px-2 h-[10rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-700 ease-in-out group-hover:translate-y-0">
+                            <span className="text-2xl block px-3 pt-4 tracking-wider uppercase">Enhanced Refresh Rate</span>
+                            <span className="text-[0.9rem] font-light block px-3 pt-2 pb-1 tracking-wider">
                                 Enjoy seamless and fluid visuals, 
                                 perfect for gaming and fast-paced action scenes, 
                                 with our screen's 120Hz refresh rate.
@@ -62,7 +62,7 @@ const InnovativeFeatures = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[29rem] h-[41rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[40rem] overflow-hidden group transform transition-transform duration-700 ease-in-out hover:scale-105 cursor-pointer rounded-3xl">
                     <div 
                         className="absolute inset-0 bg-cover rounded-3xl"
                         style={{ 
@@ -75,9 +75,9 @@ const InnovativeFeatures = () => {
                         <div className="flex-grow flex items-center justify-center">
                             <span className="text-7xl font-semibold font-roboto">Safe</span>
                         </div>
-                        <div className="bg-black bg-opacity-50 px-2 h-[13rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
-                            <span className="text-4xl block px-3 pt-2 tracking-wide">Eye Comfort Technology</span>
-                            <span className="text-[1.1rem] block px-3 pt-4 pb-2 tracking-wider">
+                        <div className="bg-black bg-opacity-50 px-2 h-[10rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-700 ease-in-out group-hover:translate-y-0">
+                            <span className="text-2xl block px-3 pt-4 tracking-wider uppercase">Eye Comfort Technology</span>
+                            <span className="text-[0.9rem] font-light block px-3 pt-2 pb-1 tracking-wider">
                                 Our screen is equipped with advanced eye comfort technology,
                                 including a built-in blue light filter reducing eye strain.
                             </span>

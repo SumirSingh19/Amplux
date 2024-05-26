@@ -41,11 +41,11 @@ const ScreenSolutions = () => {
       </div>
       <div className="flex items-center justify-center pl-44 pt-10" data-aos="zoom-in-up">
         <div className="flex flex-col mt-36 mr-[-150px] z-10">
-          <span className="text-4xl">Screen Solutions</span>
-          <span className="text-sm pt-1">Check out digital screen solutions</span>
-          <button className="flex w-24 justify-between text-xs rounded-full bg-[#B0B0B0] py-0 px-2 p-3 mt-6 hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-slate-600 duration-[400ms,1000ms] transition-shadow">
-            <span className="p-1 pl-2 font-semibold">Learn More</span>
-            <img src={ARROW_UP} alt="arrow-icon" className="w-4 mt-1" />
+          <span className="text-5xl">Screen Solutions</span>
+          <span className="text-md pt-1">Check out digital screen solutions</span>
+          <button className="flex items-center w-24 justify-between text-xs rounded-full bg-[#B0B0B0] py-1 px-2 p-3 mt-6 hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-[#888686] transition duration-700 group">
+            <span className="p-1 pl-2 font-semibold group-hover:text-white">Learn More</span>
+            <img src={ARROW_UP} alt="arrow-icon" className="w-4 mt-1 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
           </button>
         </div>
         <div className="">
