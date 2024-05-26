@@ -35,11 +35,11 @@ const ScreenSolutions = () => {
 
   return (
     <div className="flex flex-col pt-24 bg-[#f7f2f2] font-abel">
-      <div className="flex text-center flex-col text-5xl font-light" data-aos="zoom-in-left">
+      <div className="flex text-center flex-col text-5xl font-light" data-aos="zoom-in-up">
         <span>Screen and projector solution</span>
         <span>for every application</span>
       </div>
-      <div className="flex items-center justify-center pl-44 pt-10" data-aos="fade-up">
+      <div className="flex items-center justify-center pl-44 pt-10" data-aos="zoom-in-up">
         <div className="flex flex-col mt-36 mr-[-150px] z-10">
           <span className="text-4xl">Screen Solutions</span>
           <span className="text-sm pt-1">Check out digital screen solutions</span>

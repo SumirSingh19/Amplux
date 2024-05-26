@@ -5,7 +5,7 @@ const ScrollAnimation = ({ frames }) => {
   const [currentFrame, setCurrentFrame] = useState(0);
   const { ref, inView, entry } = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.8,
   });
 
   const animationInterval = useRef(null);
@@ -53,7 +53,7 @@ const ScrollAnimation = ({ frames }) => {
           key={index}
           src={frame}
           alt={`frame-${index}`}
-          className={`absolute inset-0 w-full h-full duration-[30ms] ${currentFrame === index ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full duration-0 ${currentFrame === index ? "opacity-100" : "opacity-0"}`}
         />
       ))}
     </div>

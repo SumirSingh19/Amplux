@@ -67,13 +67,14 @@ const Featured = () => {
             <div className="infinite-scroll-container" ref={scrollContainerRef}>
                 <div className="scroll-wrapper">
                     {items.concat(items).map((item, index) => (
-                        <div key={index} className="scroll-item w-[29rem] h-[30rem] bg-white p-2 pb-10">
+                        <div key={index} className="scroll-item w-[29rem] h-[30rem] bg-white p-4 pb-10 hover:scale-95 transition duration-500 rounded-3xl cursor-pointer">
                             <div className="pt-5 px-2">
                                 <span className="text-4xl">{item.title}</span>
                             </div>
                             <div className="flex flex-col flex-wrap description leading-3 pt-20 p-2 whitespace-pre-line">
                                 <span className="text-sm">{item.description}</span>
-                                <button className="flex w-24 h-6 justify-around rounded-full bg-[#B0B0B0] py-1 mt-8 mb-5 items-center">
+                                <button className="flex w-24 h-6 justify-around rounded-full bg-[#B0B0B0] py-1 mt-8 mb-5 items-center 
+                                hover:text-white hover:shadow-[inset_9rem_0_0_0] hover:shadow-slate-600 duration-700 transition-shadow">
                                     <span className="pl-2 font-medium text-[0.8rem]">Learn More</span>
                                     <img src={ARROW_UP} alt="arrow-icon" className="w-[0.7rem] mt-[2px]" />
                                 </button>

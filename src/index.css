@@ -183,7 +183,7 @@
 }
 
 .section-link:hover {
-  animation: grow 0.3s ease-in-out forwards;
+  animation: grow 0.5s ease-in-out forwards;
 }
 
 @keyframes grow {
@@ -193,6 +193,6 @@
   }
   to {
     font-weight: bold;
-    transform: scale(1.1); /* Adjust scale for desired size increase */
+    transform: scale(1.05); /* Adjust scale for desired size increase */
   }
 }

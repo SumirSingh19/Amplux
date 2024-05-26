@@ -12,14 +12,14 @@ const InnovativeFeatures = () => {
       }, []);
 
     return (
-        <div className="bg-[#f7f2f2] py-8 font-abel flex flex-col pt-36">
-            <div className="mb-8 text-left p-2 pl-9" data-aos="zoom-in-left">
-                <span className="text-6xl">Innovative Features</span>
+        <div className="bg-[#f7f2f2] py-8 flex flex-col pt-36">
+            <div className="mb-12 text-left p-2 pl-9" data-aos="zoom-in-left font-roboto">
+                <span className="text-5xl">Innovative Features</span>
             </div>
             <div className="flex flex-wrap p-3 gap-8 justify-center" data-aos="zoom-in-left">
-                <div className="relative w-[29rem] h-[42rem] overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[41rem] overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
                     <div 
-                        className="absolute inset-0 bg-cover bg-center rounded-xl"
+                        className="absolute inset-0 bg-cover bg-center rounded-3xl"
                         style={{ 
                             backgroundImage: `url(${HDR})`,
                             backgroundSize: '280%',
@@ -39,9 +39,9 @@ const InnovativeFeatures = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[29rem] h-[42rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[41rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
                     <div 
-                        className="absolute inset-0 bg-cover bg-center rounded-xl"
+                        className="absolute inset-0 bg-cover bg-center rounded-3xl"
                         style={{ 
                             backgroundImage: `url(${REFRESH})`,
                             backgroundSize: '450%',
@@ -62,9 +62,9 @@ const InnovativeFeatures = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[29rem] h-[42rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                <div className="relative w-[29rem] h-[41rem] p-4 overflow-hidden group transform transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
                     <div 
-                        className="absolute inset-0 bg-cover rounded-xl"
+                        className="absolute inset-0 bg-cover rounded-3xl"
                         style={{ 
                             backgroundImage: `url(${SAFE})`,
                             backgroundSize: '222%',
@@ -76,8 +76,8 @@ const InnovativeFeatures = () => {
                             <span className="text-7xl font-semibold font-roboto">Safe</span>
                         </div>
                         <div className="bg-black bg-opacity-50 px-2 h-[13rem] py-1 w-full text-left rounded-lg transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
-                            <span className="text-4xl block px-3 pt-2 tracking-wider">Eye Comfort Technology</span>
-                            <span className="text-[1.1rem] block px-3 pt-4 pb-1 tracking-wider">
+                            <span className="text-4xl block px-3 pt-2 tracking-wide">Eye Comfort Technology</span>
+                            <span className="text-[1.1rem] block px-3 pt-4 pb-2 tracking-wider">
                                 Our screen is equipped with advanced eye comfort technology,
                                 including a built-in blue light filter reducing eye strain.
                             </span>

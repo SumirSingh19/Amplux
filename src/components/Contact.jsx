@@ -1,12 +1,42 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
 const Contact = () => {
 
+    const [typedText, setTypedText] = useState('');
+    const textToType = "Ready to take things to the next level? Get in touch!";
+    const typingSpeed = 50; // Milliseconds per character
+    const isMounted = useRef(false);
+
     useEffect(() => {
-        Aos.init({duration: 2000});
-      }, []);
+        Aos.init({ duration: 2000 });
+
+        const typingTimeout = setTimeout(() => {
+            const typeText = async () => {
+                for (let i = 0; i < textToType.length; i++) {
+                    await new Promise(resolve => setTimeout(() => {
+                        setTypedText(prevText => prevText + textToType.charAt(i));
+                        resolve();
+                    }, typingSpeed));
+                }
+            };
+
+            typeText();
+        }, 1500);
+
+        return () => {
+            clearTimeout(typingTimeout);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isMounted.current) {
+            setTypedText('');
+        } else {
+            isMounted.current = true;
+        }
+    }, [textToType]);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -33,14 +63,12 @@ const Contact = () => {
     return (
         <div className="flex flex-col bg-[#f7f2f2] p-6 font-abel">
             <div className="mb-6 txt-left"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0">
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0">
                 <div className='w-10/12 tracking-widest'>
-                    <span className="text-9xl">
-                        Ready to take things to the next level? Get in touch!
-                    </span>
+                    <span className="text-9xl">{typedText}</span>
                 </div>
                 
             </div>
@@ -60,7 +88,7 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                             />
                         </div>
                         <div>
@@ -72,7 +100,7 @@ const Contact = () => {
                                 value={formData.phone}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                             />
                         </div>
                     </div>
@@ -86,7 +114,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-[41rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                            className="w-[41rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                         />
                     </div>
                     <div>
@@ -119,7 +147,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             className="w-[10rem] p-2 bg-[#626365] text-white rounded-full hover:bg-[#717275] focus:outline-none focus:ring-2 focus:ring-[#626365]
-                            hover:text-white hover:shadow-[inset_14rem_0_0_0] hover:shadow-slate-400 duration-[400ms,700ms] transition-shadow"
+                            hover:text-white hover:shadow-[inset_11rem_0_0_0] hover:shadow-[#454647] hover:scale-90 transition duration-700"
                         >
                             Send
                         </button>

@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 import { useEffect, useRef, useState } from "react";
 import PHOTO1 from "../assets/images/projector1.webp";
 import PHOTO2 from "../assets/images/panel1.jpg";
-import PHOTO3 from "../assets/images/panel2.jpg";
+import PHOTO3 from "../assets/images/panel2.jpeg";
 import PHOTO4 from "../assets/images/screen2.jpg";
 
 const ScreenCarousel = () => {
@@ -50,7 +50,7 @@ const ScreenCarousel = () => {
   
   
     return (
-      <div className="overflow-hidden">
+      <div className="overflow-hidden sticky">
         <div className="bg-[#f7f2f2] flex flex-col font-abel items-center py-32 sticky">
                 <div className="text-center flex flex-col items-center pl-3" data-aos="zoom-in-up">
                     <div className="w-11/12 pb-5">
@@ -64,13 +64,13 @@ const ScreenCarousel = () => {
                     </div>
                 </div>
                 <div ref={containerRef} className="flex items-center justify-start gap-8 overflow-x-auto w-full hide-scrollbar" data-aos="zoom-in">
-                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3">
+                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
                         <div>
-                            <img src={PHOTO2} alt="" className="w-[30rem] h-[30rem] p-2" />
+                            <img src={PHOTO2} alt="" className="w-[30rem] h-[30rem] p-2 hover:scale-110 transition duration-700" />
                         </div>
-                        <div className="px-3 pt-1">
+                        <div className="px-3 pt-1 z-10">
                             <div>
-                                <span className="text-3xl">Interactive Flat Panel Display</span>
+                                <span className="text-3xl ">Interactive Flat Panel Display</span>
                             </div>
                             <div>
                                 <span className="text-base tracking-wider">
@@ -80,11 +80,11 @@ const ScreenCarousel = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3">
+                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
                         <div>
-                            <img src={PHOTO1} alt="" className="w-[30rem] h-[30rem]" />
+                            <img src={PHOTO1} alt="" className="w-[30rem] h-[30rem] hover:scale-110 transition duration-700" />
                         </div>
-                        <div className="px-6 py-4">
+                        <div className="px-6 py-4 z-10">
                             <div>
                                 <span className="text-3xl">Projector Screens</span>
                             </div>
@@ -96,11 +96,11 @@ const ScreenCarousel = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3">
+                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
                         <div>
-                            <img src={PHOTO3} alt="" className="w-[35rem] h-[30rem] p-3" />
+                            <img src={PHOTO3} alt="" className="w-[35rem] h-[30rem] p-3 hover:scale-110 transition duration-700" />
                         </div>
-                        <div className="p-3 pt-4">
+                        <div className="p-3 pt-4 z-10">
                             <div>
                                 <span className="text-3xl">Active LED Displays</span>
                             </div>
@@ -111,11 +111,11 @@ const ScreenCarousel = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3">
+                    <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
                         <div>
-                            <img src={PHOTO4} alt="" className="w-[30rem] h-[30rem] pt-1" />
+                            <img src={PHOTO4} alt="" className="w-[30rem] h-[30rem] pt-1 hover:scale-110 transition duration-700" />
                         </div>
-                        <div className="p-3 pt-0">
+                        <div className="p-3 pt-0 z-10">
                             <div>
                                 <span className="text-3xl">All-In-One-LED Series</span>
                             </div>
