@@ -3,40 +3,42 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 
 const Contact = () => {
-
     const [typedText, setTypedText] = useState('');
     const textToType = "Ready to take things to the next level? Get in touch!";
     const typingSpeed = 50; // Milliseconds per character
-    const isMounted = useRef(false);
+    const [hasTyped, setHasTyped] = useState(false);
+    const sectionRef = useRef(null);
+    const observerRef = useRef(null);
 
     useEffect(() => {
         Aos.init({ duration: 2000 });
 
-        const typingTimeout = setTimeout(() => {
-            const typeText = async () => {
-                for (let i = 0; i < textToType.length; i++) {
-                    await new Promise(resolve => setTimeout(() => {
-                        setTypedText(prevText => prevText + textToType.charAt(i));
-                        resolve();
-                    }, typingSpeed));
-                }
-            };
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !hasTyped) {
+                startTyping();
+                observer.disconnect();
+            }
+        }, {
+            threshold: 0.1
+        });
 
-            typeText();
-        }, 1500);
+        observer.observe(sectionRef.current);
+        observerRef.current = observer;
 
         return () => {
-            clearTimeout(typingTimeout);
+            observer.disconnect();
         };
-    }, []);
+    }, [hasTyped]);
 
-    useEffect(() => {
-        if (isMounted.current) {
-            setTypedText('');
-        } else {
-            isMounted.current = true;
+    const startTyping = async () => {
+        for (let i = 0; i < textToType.length; i++) {
+            await new Promise(resolve => setTimeout(() => {
+                setTypedText(prevText => prevText + textToType.charAt(i));
+                resolve();
+            }, typingSpeed));
         }
-    }, [textToType]);
+        setHasTyped(true);
+    };
 
     const [formData, setFormData] = useState({
         name: '',
@@ -61,22 +63,17 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[#f7f2f2] p-6 font-abel">
-            <div className="mb-6 txt-left"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="300"
-                data-aos-offset="0">
+        <div ref={sectionRef} className="flex flex-col bg-[#f7f2f2] p-6 font-abel">
+            <div className="mb-6 txt-left">
                 <div className='w-10/12 tracking-widest'>
                     <span className="text-9xl">{typedText}</span>
                 </div>
-                
             </div>
             <div className="w-full max-w-md"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0">
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="200"
+                data-aos-offset="0">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className='flex gap-4'>
                         <div>
@@ -104,7 +101,6 @@ const Contact = () => {
                             />
                         </div>
                     </div>
-                    
                     <div>
                         <input
                             type="email"
