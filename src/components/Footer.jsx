@@ -6,7 +6,7 @@ const Footer = () => {
             {/* Overlay Layer */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
             
-            <div className="relative z-10 flex flex-col left-0" data-aos="fade-right">
+            <div className="relative z-10 flex flex-col left-0">
                 <div className="flex justify-between py-8 p-5">
                     <div className="pr-10 text-xs py-24 opacity-80">
                         <ul>

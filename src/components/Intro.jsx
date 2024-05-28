@@ -26,7 +26,7 @@ const Intro = () => {
                 </div>
             </div>
             <div className="w-full h-screen">
-                <video autoPlay muted loop src={INTRO_VIDEO} className="w-full h-full object-cover"></video>
+                <video autoPlay muted loop src={INTRO_VIDEO} className="w-full h-full object-cover brightness-150"></video>
             </div>
         </div>
     );
