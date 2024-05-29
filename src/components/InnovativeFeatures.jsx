@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import HDR from "../assets/images/Picture-3.png";
 import REFRESH from "../assets/images/refresh.jpg";
 import SAFE from "../assets/images/computer-glasses.jpg";
+import 'aos/dist/aos.css';
 
 const InnovativeFeatures = () => {
 
@@ -12,6 +13,8 @@ const InnovativeFeatures = () => {
       }, []);
 
     return (
+        <>
+        
         <div className="bg-[#f7f2f2] py-8 flex flex-col pt-36">
             <div className="mb-12 text-left p-2 pl-9" data-aos="zoom-in-left font-roboto">
                 <span className="text-5xl">Innovative Features</span>
@@ -86,7 +89,24 @@ const InnovativeFeatures = () => {
                 </div>
             </div>
         </div>
-    );
+        
+        <div className="flex flex-col items-center bg-[#f7f2f2] font-abel py-32">
+    <div className="text-center flex flex-col items-center mb-12" data-aos="zoom-in-up">
+      <div className="w-11/12 pb-5">
+        <span className="text-8xl font-light tracking-tight">Transform Any Space Into Immersive Theater</span>
+      </div>
+      <div className="w-8/12 font-light text-center pb-10">
+        <span className="text-3xl font-roboto text-[#4D4D4D] font-light tracking-tight">
+          Amplux Is A Leading Technology Company Providing State-Of-The-Art
+          Digital Screens, Projectors, And Displays For Businesses Of All Sizes.
+        </span>
+      </div>
+    </div>
+    </div>
+
+        </>
+
+    )
 };
 
 export default InnovativeFeatures;
