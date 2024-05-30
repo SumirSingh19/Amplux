@@ -3,14 +3,14 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import LOGO from "../assets/images/ampluxe.png";
 import ARROW1 from "../assets/icons/arrow1.png";
 import ARROW2 from "../assets/icons/arrow2.png";
-import PHOTO4 from "../assets/images/panel3.png";
+import PHOTO3 from "../assets/images/panel2.jpeg";
 
-const AllInOneLED = () => {
-    const [activeTab, setActiveTab] = useState('features');
+const ActiveLEDDIsplay = () => {
+    const [activeTab, setActiveTab] = useState('indoor-cabinets');
     const navigate = useNavigate();
 
     useEffect(() => {
-        navigate('features');
+        navigate('indoor-cabinets');
     }, [navigate]);
 
     return (
@@ -32,7 +32,7 @@ const AllInOneLED = () => {
             {/* Main Content Section */}
             <div className="flex flex-col items-center pt-52">
                 <div>
-                    <span className="text-9xl">All In One LED</span>
+                    <span className="text-9xl">Active LED Displays</span>
                 </div>
                 <div className="flex gap-8 pt-40">
                     <button className="text-white bg-[#4D4D4D] py-3 px-7 rounded-full text-[0.8rem] uppercase">Specifications</button>
@@ -40,28 +40,30 @@ const AllInOneLED = () => {
                 </div>
                 <div className="flex flex-col items-center">
                     <div>
-                        <img src={PHOTO4} className="w-[40rem] pt-8" alt="All-In-One-LED" />
+                        <img src={PHOTO3} className="w-[40rem] pt-8" alt="All-In-One-LED" />
                     </div>
                     <div className="w-6/12 text-justify text-2xl uppercase pt-9">
                         <span>
-                            Ampluxe’s All-in-One LED series consists of 120-inch, 138-inch, 
-                            150-inch, and 165-inch large screens which are offered as an all-in-one package 
-                            including an embedded controller & built-in high-quality audio system.
+                            Introducing our state-of-the-art Active LED Panel Display, engineered to 
+                            redefine visual excellence with vibrant colors, remarkable clarity, and 
+                            dynamic contrast. This sleek and modern display seamlessly enhances any 
+                            environment, prioritizing user comfort with features like low Blue Light 
+                            emission and Flicker Free technology.
                         </span>
                     </div>
                 </div>
 
                 {/* Tabbed Navigation Section */}
-                <div className="flex font-roboto mb-20 px-40 w-full">
-                    <div className="flex pt-20 left-0 gap-1 w-full border-b border-[#D3D3D3]">
-                        <div className={`border border-[#D3D3D3] py-3 px-8 font-medium text-sm ${activeTab === 'features' ? 'bg-[#888888] text-white' : 'bg-[#F1F1F1]'}`}>
-                            <Link to="features" onClick={() => setActiveTab('features')}>Features</Link>
+                <div className="flex flex-col mb-10 px-40 w-full mt-20">
+                    <div className="text-3xl">
+                        <span>Choose Your Model:</span>
+                    </div>
+                    <div className="flex left-0 pt-10 font-roboto gap-1 w-full border-b border-[#D3D3D3]">
+                        <div className={`border border-[#D3D3D3] py-3 px-8 font-medium text-sm ${activeTab === 'indoor-cabinets' ? 'bg-[#888888] text-white' : 'bg-[#F1F1F1]'}`}>
+                            <Link to="indoor-cabinets" onClick={() => setActiveTab('indoor-cabinets')}>Indoor Cabinets</Link>
                         </div>
-                        <div className={`border border-[#D3D3D3] py-3 px-8 font-medium text-sm ${activeTab === 'specifications' ? 'bg-[#888888] text-white' : 'bg-[#F1F1F1]'}`}>
-                            <Link to="specifications" onClick={() => setActiveTab('specifications')}>Specifications</Link>
-                        </div>
-                        <div className={`border border-[#D3D3D3] py-3 px-8 font-medium text-sm ${activeTab === 'downloads' ? 'bg-[#888888] text-white' : 'bg-[#F1F1F1]'}`}>
-                            <Link to="downloads" onClick={() => setActiveTab('downloads')}>Downloads</Link>
+                        <div className={`border border-[#D3D3D3] py-3 px-8 font-medium text-sm ${activeTab === 'outdoor-cabinets' ? 'bg-[#888888] text-white' : 'bg-[#F1F1F1]'}`}>
+                            <Link to="outdoor-cabinets" onClick={() => setActiveTab('outdoor-cabinets')}>Outdoor Cabinets</Link>
                         </div>
                     </div>
                 </div>
@@ -75,4 +77,4 @@ const AllInOneLED = () => {
     );
 };
 
-export default AllInOneLED;
+export default ActiveLEDDIsplay;
