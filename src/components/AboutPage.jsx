@@ -8,8 +8,10 @@ import PHOTO3 from "../assets/images/about3.png";
 import { useState } from "react";
 import MenuComponent from "./MenuComponent";
 
+
 const AboutPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -55,7 +57,8 @@ const AboutPage = () => {
                 <div className="text-9xl uppercase">
                     <h1>About Us</h1>
                 </div>
-                <div className="px-20 py-20">
+                <div className="px-20 py-20"> 
+                {/* replace this video tag with the animation stuff but make sure to render frames over the screen */}
                     <video autoPlay muted loop src={INTRO_VIDEO} className="brightness-200 rounded-3xl"></video>
                 </div>
                 <section className="flex flex-col items-center text-center pt-10">

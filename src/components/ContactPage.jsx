@@ -3,6 +3,9 @@ import LOGO from "../assets/images/ampluxe.png";
 import ARROW1 from "../assets/icons/arrow1.png";
 import ARROW2 from "../assets/icons/arrow2.png";
 import MenuComponent from "./MenuComponent";
+import PHOTO1 from "../assets/images/3d1.png";
+import PHOTO2 from "../assets/images/3d2.png";
+import PHOTO3 from "../assets/images/3d3.png";
 
 const ContactPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,6 +62,8 @@ const ContactPage = () => {
         console.log(formData);
     };
 
+    const images = [PHOTO1, PHOTO2, PHOTO3];
+
     return (
         <div className="w-full h-full font-abel">
             <header className="flex justify-between p-4 z-20">
@@ -91,161 +96,170 @@ const ContactPage = () => {
                 <div className="w-1/3 text-center flex">
                     <span className="text-9xl uppercase">Lets Connect</span>
                 </div>
-                <div className="flex p-8 shadow-md mt-10 border border-[#070707] rounded-xl mb-36">
-                    <form onSubmit={handleSubmit} className="w-[38rem] font-roboto">
-                        <div className="flex gap-4">
-                            <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="firstName">
-                                    <span>Name</span>
-                                    <span className="text-red-600">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    name="firstName" 
-                                    id="firstName"
-                                    placeholder="XYZ" 
-                                    value={formData.firstName} 
-                                    onChange={handleChange} 
-                                    className="w-full border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                    required
-                                />
+                <div className='flex items-center gap-20'>
+                    <div className="flex p-8 shadow-md mt-10 border border-[#070707] rounded-xl mb-36">
+                        <form onSubmit={handleSubmit} className="w-[38rem] font-roboto">
+                            <div className="flex gap-4">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
+                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="firstName">
+                                        <span>Name</span>
+                                        <span className="text-red-600">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        name="firstName" 
+                                        id="firstName"
+                                        placeholder="XYZ" 
+                                        value={formData.firstName} 
+                                        onChange={handleChange} 
+                                        className="w-full border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
+                                    />
+                                </div>
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
+                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="lastName">
+                                        <span>Last Name</span>
+                                        <span className="text-red-600">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        name="lastName" 
+                                        id="lastName" 
+                                        placeholder="ABC"
+                                        value={formData.lastName} 
+                                        onChange={handleChange} 
+                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
+                                    />
+                                </div>
                             </div>
-                            <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="lastName">
-                                    <span>Last Name</span>
-                                    <span className="text-red-600">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    name="lastName" 
-                                    id="lastName" 
-                                    placeholder="ABC"
-                                    value={formData.lastName} 
-                                    onChange={handleChange} 
-                                    className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                    required
-                                />
-                            </div>
-                        </div>
 
-                        <div className="flex gap-4 pt-2">
-                            <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="company">
-                                    <span>Company</span>
-                                    <span className="text-red-600">*</span>
+                            <div className="flex gap-4 pt-2">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
+                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="company">
+                                        <span>Company</span>
+                                        <span className="text-red-600">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        name="company" 
+                                        id="company"
+                                        placeholder="Nome Azienda" 
+                                        value={formData.company} 
+                                        onChange={handleChange} 
+                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
+                                    />
+                                </div>
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
+                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="role">
+                                        <span>Role</span>
+                                        <span className="text-red-600">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        name="role" 
+                                        id="role"
+                                        placeholder="Es. Market manager" 
+                                        value={formData.role} 
+                                        onChange={handleChange} 
+                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
+                                    />
+                                </div>
+                            </div>                    
+                            
+                            <div className="mb-4 w-[38rem] flex flex-col gap-2">
+                                <label className="text-gray-700 text-sm font-bold" htmlFor="website">
+                                    Website
                                 </label>
                                 <input 
-                                    type="text" 
-                                    name="company" 
-                                    id="company"
-                                    placeholder="Nome Azienda" 
-                                    value={formData.company} 
-                                    onChange={handleChange} 
-                                    className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                    required
+                                    type="url" 
+                                        name="website" 
+                                        id="website"
+                                        placeholder="www.example.com" 
+                                        value={formData.website} 
+                                        onChange={handleChange} 
+                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
                                 />
                             </div>
-                            <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="role">
-                                    <span>Role</span>
-                                    <span className="text-red-600">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    name="role" 
-                                    id="role"
-                                    placeholder="Es. Market manager" 
-                                    value={formData.role} 
-                                    onChange={handleChange} 
-                                    className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                    required
-                                />
-                            </div>
-                        </div>                    
-                        
-                        <div className="mb-4 w-[38rem] flex flex-col gap-2">
-                            <label className="text-gray-700 text-sm font-bold" htmlFor="website">
-                                Website
-                            </label>
-                            <input 
-                                type="url" 
-                                    name="website" 
-                                    id="website"
-                                    placeholder="www.example.com" 
-                                    value={formData.website} 
-                                    onChange={handleChange} 
-                                    className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                    required
-                            />
-                        </div>
 
-                        <div className="flex gap-4">
-                            <div className="flex flex-col gap-2 w-[18.5rem]">
-                                <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="email">
-                                    <span>Email</span>
-                                    <span className="text-red-600">*</span>
+                            <div className="flex gap-4">
+                                <div className="flex flex-col gap-2 w-[18.5rem]">
+                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="email">
+                                        <span>Email</span>
+                                        <span className="text-red-600">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        name="email" 
+                                        id="email" 
+                                        placeholder="example@email.com"
+                                        value={formData.email} 
+                                        onChange={handleChange} 
+                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        required
+                                    />
+                                </div>
+                                <div className="flex flex-col gap-2 w-[18.5rem] relative">
+                                    <label className="text-gray-700 text-sm font-bold" htmlFor="phone">
+                                        Phone no.
+                                    </label>
+                                    <input
+                                        mask="+91 9999999999"
+                                        value={formData.phone}
+                                        onChange={handlePhoneChange}
+                                        className="border-b-2 border-[#888888] pl-12 text-xs pt-1"
+                                        required
+                                    />
+                                    <span className="absolute left-5 pt-1 top-7 text-xs text-[#161616]">+91 </span>
+                                </div>
+                            </div>
+
+                            <div className="py-10 flex flex-col gap-1">
+                                <div>
+                                    <span className="font-semibold">Purpose</span>
+                                </div>
+                                <ul className="flex flex-wrap gap-2">
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Collaboration</li>
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Marketplace</li>
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Distribution</li>
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Payment</li>
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Business</li>
+                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Other</li>
+                                </ul>
+                            </div>
+                            
+                            <div className="mb-4 w-[38rem] flex flex-col relative">
+                                <label className="text-gray-700 text-sm font-bold" htmlFor="message">
+                                    Custom Message
                                 </label>
-                                <input 
-                                    type="email" 
-                                    name="email" 
-                                    id="email" 
-                                    placeholder="example@email.com"
-                                    value={formData.email} 
+                                <textarea 
+                                    name="message" 
+                                    id="message" 
+                                    value={formData.message} 
                                     onChange={handleChange} 
-                                    className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                    className="h-[12rem] border-b border-[#888888]"
                                     required
-                                />
+                                ></textarea>
+                                <span className="absolute bottom-2 right-2 text-sm text-gray-500">{messageCharCount}/500</span>
                             </div>
-                            <div className="flex flex-col gap-2 w-[18.5rem] relative">
-                                <label className="text-gray-700 text-sm font-bold" htmlFor="phone">
-                                    Phone no.
-                                </label>
-                                <input
-                                    mask="+91 9999999999"
-                                    value={formData.phone}
-                                    onChange={handlePhoneChange}
-                                    className="border-b-2 border-[#888888] pl-12 text-xs pt-1"
-                                    required
-                                />
-                                <span className="absolute left-5 pt-1 top-7 text-xs text-[#161616]">+91 </span>
-                            </div>
-                        </div>
 
-                        <div className="py-10 flex flex-col gap-1">
-                            <div>
-                                <span className="font-semibold">Purpose</span>
+                            <div className="flex justify-center">
+                                <button type="submit" className="text-white bg-[#292639] py-3 px-[18rem] font-roboto rounded-full text-[0.8rem] uppercase hover:bg-[#4D4D4D] hover:scale-x-95 transition duration-500">
+                                    Submit
+                                </button>
                             </div>
-                            <ul className="flex flex-wrap gap-2">
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Collaboration</li>
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Marketplace</li>
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Distribution</li>
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Payment</li>
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Business</li>
-                                <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Other</li>
-                            </ul>
-                        </div>
-                        
-                        <div className="mb-4 w-[38rem] flex flex-col relative">
-                            <label className="text-gray-700 text-sm font-bold" htmlFor="message">
-                                Custom Message
-                            </label>
-                            <textarea 
-                                name="message" 
-                                id="message" 
-                                value={formData.message} 
-                                onChange={handleChange} 
-                                className="h-[12rem] border-b border-[#888888]"
-                                required
-                            ></textarea>
-                            <span className="absolute bottom-2 right-2 text-sm text-gray-500">{messageCharCount}/500</span>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <button type="submit" className="text-white bg-[#292639] py-3 px-[18rem] font-roboto rounded-full text-[0.8rem] uppercase hover:bg-[#4D4D4D] hover:scale-x-95 transition duration-500">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <div className="isometric-container pb-60 cursor-pointer">
+                        {images.map((src, index) => (
+                            <div key={index} className="isometric-card">
+                            <img src={src} alt={`Card ${index}`} className="card-image" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </main>
         </div>

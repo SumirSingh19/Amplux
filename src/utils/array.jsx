@@ -1,0 +1,36 @@
+import PHOTOS1 from "../assets/images/frames/wp_intro_v_001-1-1.webp"
+import PHOTOS2 from "../assets/images/frames/wp_intro_v_001-1-4.webp"
+import PHOTOS3 from "../assets/images/frames/wp_intro_v_001-1-8.webp"
+import PHOTOS4 from "../assets/images/frames/wp_intro_v_001-1-12.webp"
+import PHOTOS5 from "../assets/images/frames/wp_intro_v_001-1-16.webp"
+import PHOTOS6 from "../assets/images/frames/wp_intro_v_001-1-20.webp"
+import PHOTOS7 from "../assets/images/frames/wp_intro_v_001-1-24.webp"
+import PHOTOS8 from "../assets/images/frames/wp_intro_v_001-1-28.webp"
+import PHOTOS9 from "../assets/images/frames/wp_intro_v_001-1-32.webp"
+import PHOTOS10 from "../assets/images/frames/wp_intro_v_001-1-36.webp"
+import PHOTOS11 from "../assets/images/frames/wp_intro_v_001-1-40.webp"
+import PHOTOS12 from "../assets/images/frames/wp_intro_v_001-1-44.webp"
+import PHOTOS13 from "../assets/images/frames/wp_intro_v_001-1-48.webp"
+import PHOTOS14 from "../assets/images/frames/wp_intro_v_001-1-52.webp"
+import PHOTOS15 from "../assets/images/frames/wp_intro_v_001-1-56.webp"
+import PHOTOS16 from "../assets/images/frames/wp_intro_v_001-1-59.webp"
+import PHOTOS17 from "../assets/images/frames/wp_intro_v_001-1-63.webp"
+import PHOTOS18 from "../assets/images/frames/wp_intro_v_001-1-67.webp"
+import PHOTOS19 from "../assets/images/frames/wp_intro_v_001-1-71.webp"
+import PHOTOS20 from "../assets/images/frames/wp_intro_v_001-1-75.webp"
+import PHOTOS21 from "../assets/images/frames/wp_intro_v_001-1-79.webp"
+import PHOTOS22 from "../assets/images/frames/wp_intro_v_001-1-83.webp"
+import PHOTOS23 from "../assets/images/frames/wp_intro_v_001-1-87.webp"
+import PHOTOS24 from "../assets/images/frames/wp_intro_v_001-1-91.webp"
+import PHOTOS25 from "../assets/images/frames/wp_intro_v_001-1-95.webp"
+import PHOTOS26 from "../assets/images/frames/wp_intro_v_001-1-99.webp"
+import PHOTOS27 from "../assets/images/frames/wp_intro_v_001-1-103.webp"
+import PHOTOS28 from "../assets/images/frames/wp_intro_v_001-1-107.webp"
+import PHOTOS29 from "../assets/images/frames/wp_intro_v_001-1-111.webp"
+import PHOTOS30 from "../assets/images/frames/wp_intro_v_001-1-115.webp"
+
+export const images = [
+    PHOTOS1,PHOTOS2,PHOTOS3,PHOTOS4,PHOTOS5, PHOTOS6,PHOTOS7,PHOTOS8,PHOTOS9,PHOTOS10,PHOTOS11,PHOTOS12,PHOTOS13,
+    PHOTOS14,PHOTOS15,PHOTOS16,PHOTOS17,PHOTOS18,PHOTOS19,PHOTOS20,PHOTOS21,PHOTOS22,PHOTOS23,PHOTOS24,PHOTOS25,
+    PHOTOS26,PHOTOS27,PHOTOS28,PHOTOS29,PHOTOS30
+];
