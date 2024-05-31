@@ -1,4 +1,4 @@
-import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
+import { Outlet, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
 import Footer from './components/Footer';
@@ -16,6 +16,12 @@ import IndoorCabinets from './components/IndoorCabinets';
 import OutdoorCabinets from './components/OutdoorCabinets';
 import MenuComponent from './components/MenuComponent';
 import ErrorElement from './components/ErrorElement';
+import ProjectorScreen from './components/ProjectorScreen';
+import FixedScreen from './components/FixedScreen';
+import MotorizedScreen from './components/MotorizedScreen';
+import CustomScreen from './components/CustomScreen';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 
 const AppLayout = () => {
   return (
@@ -30,6 +36,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <ErrorElement />, // Moved inside the root route configuration
     children: [
       {
         path: "",
@@ -38,6 +45,14 @@ const appRouter = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
       {
         path: "All-In-One-LED",
@@ -59,7 +74,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "Flat-Panel-Display",
-        element: <FlatPanelDisplay/>,
+        element: <FlatPanelDisplay />,
         children: [
           {
             path: "features",
@@ -73,7 +88,7 @@ const appRouter = createBrowserRouter([
             path: "downloads",
             element: <FlatPanelDisplayDownloads />,
           },
-        ]
+        ],
       },
       {
         path: "Active-LED-Display",
@@ -86,18 +101,31 @@ const appRouter = createBrowserRouter([
           {
             path: "outdoor-cabinets",
             element: <OutdoorCabinets />,
-          }
-        ]
+          },
+        ],
       },
       {
         path: "menu-component",
-        element: <MenuComponent/>
+        element: <MenuComponent />,
+      },
+      {
+        path: "projector-screens",
+        element: <ProjectorScreen />,
+      },
+      {
+        path: "fixed-screens",
+        element: <FixedScreen />
+      },
+      {
+        path: "motorized-screens",
+        element: <MotorizedScreen />
+      },
+      {
+        path: "custom-screens",
+        element: <CustomScreen />
       },
     ],
   },
-  {
-    errorElement: <ErrorElement />,
-  }
 ]);
 
-export {appRouter};
+export { appRouter };

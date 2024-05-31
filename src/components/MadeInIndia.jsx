@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import MADE_IN_INDIA from "../assets/images/ultra-wide.png";
+import VIDEO from "../assets/videos/3.mp4";
 import AMPLUX from "../assets/images/amplux1.png";
 
 const MadeInIndia = () => {
@@ -38,8 +39,7 @@ const MadeInIndia = () => {
     return (
         <div className="font-abel bg-[#f7f2f2] flex flex-col items-center">
             <div className="w-11/12 flex flex-col items-center">
-                <img src={MADE_IN_INDIA} alt="made-in-india-logo" className="w-full mt-[-120px]" />
-                <img src={AMPLUX} alt="amplux-logo" className="w-28 mt-[-161px]" />
+            <video src={VIDEO} autoPlay muted loop className="w-full h-screen object-cover"></video>
             </div>
             <div>
                 <div className="flex flex-col items-center pt-16">

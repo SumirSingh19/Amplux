@@ -1,16 +1,13 @@
-import { useEffect, useRef, useState,useLayoutEffect,useCallback } from "react";
-import Aos from "aos";
+import { useRef } from "react";
 import 'aos/dist/aos.css';
-import PHOTO1 from "../assets/images/projector1.webp";
-import PHOTO2 from "../assets/images/panel1.jpg";
-import PHOTO3 from "../assets/images/panel2.jpeg";
-import PHOTO4 from "../assets/images/screen2.jpg";
-import ResizeObserver from "resize-observer-polyfill"
+import PHOTO1 from "../assets/images/projector1.png";
+import PHOTO2 from "../assets/images/panel1.png";
+import PHOTO3 from "../assets/images/panel2.png";
+import PHOTO4 from "../assets/images/screen2.png";
 import {
   motion,
   useScroll,
   useTransform,
-  useSpring
 } from "framer-motion"
 
 const ScreenCarousel1 = () => {

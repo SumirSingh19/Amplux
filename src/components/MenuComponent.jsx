@@ -37,7 +37,7 @@
                             </div>
                             <div className='flex flex-col gap-[4rem]'>
                                 <div className="text-3xl flex gap-[16rem]">
-                                <Link to={"/"}>
+                                <Link to={"/projector-screens"}>
                                     <div className='flex items-center gap-3 hover:scale-110 transition duration-500 cursor-pointer'>
                                         
                                         <img src={ARROW_RIGHT1} alt="" />
@@ -53,7 +53,7 @@
                                 </Link>
                                     
                                 </div>
-                                <div className="text-3xl flex gap-[15.5rem]">
+                                <div className="text-3xl flex gap-[14rem]">
                                 <Link to={"/All-In-One-LED"}>
                                     <div className='flex items-center gap-3 hover:scale-110 transition duration-500 cursor-pointer'>
                                         
@@ -75,10 +75,16 @@
                     )}
                 </div>
                 <div className='flex'>
-                    <span className='hover:scale-110 transition duration-500'>About</span>
+                    <Link className='hover:scale-110 transition duration-500' to="/about">
+                        <span >About</span>
+                    </Link>
+                    
                 </div>
                 <div className='flex'>
-                    <span className='hover:scale-110 transition duration-500'>Contact</span>
+                    <Link className='hover:scale-110 transition duration-500' to={"/contact"}>
+                        <span>Contact</span>
+                    </Link>
+                    
                 </div>
             </div>
         );

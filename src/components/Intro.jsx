@@ -4,28 +4,29 @@ import LOGO from "../assets/images/ampluxe.png";
 import ARROW1 from "../assets/icons/arrow1.png";
 import ARROW2 from "../assets/icons/arrow2.png";
 import MenuComponent from "./MenuComponent";
+import { Link } from 'react-router-dom';
 
 const Intro = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [videoOpacity, setVideoOpacity] = useState(1); // Initial opacity of the video
+    const [videoOpacity, setVideoOpacity] = useState(1);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        setVideoOpacity(isMenuOpen ? 1 : 0.5); // Adjust video opacity based on menu state
+        setVideoOpacity(isMenuOpen ? 1 : 0.5);
     };
 
     const closeMenu = () => {
         setIsMenuOpen(false);
-        setVideoOpacity(1); // Reset video opacity when menu is closed
+        setVideoOpacity(1);
     };
 
     return (
         <div className="relative w-full h-full font-abel">
-            <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
+            <div className="absolute top-0 left-0 right-0 flex justify-between p-4 z-20">
                 <div className="w-40">
                     <img src={LOGO} alt="Logo" className="w-full" />
                 </div>
-                <div className="flex gap-5 h-[4.5rem] p-4 z-10">
+                <div className="flex gap-5 h-[4.5rem] p-4">
                     <div 
                         className="flex items-center rounded-full bg-white text-base font-roboto font-normal p-6 py-[0.4rem] cursor-pointer transition duration-500 ease-in-out hover:bg-black hover:text-white group"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
@@ -36,7 +37,9 @@ const Intro = () => {
                             <span className={`block w-5 h-[0.1rem] bg-black transition duration-500 ease-in-out group-hover:bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
-                    <span className="rounded-full bg-white text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer hover:bg-black hover:text-white transition duration-300 ease-in-out">CONTACT</span>
+                    <Link to={"contact"} className="rounded-full bg-white text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer hover:bg-black hover:text-white transition duration-300 ease-in-out">
+                        <span >CONTACT</span>
+                    </Link>
                     <div className="flex rounded-full bg-white pr-5 px-3 pt-1 cursor-pointer transition duration-300 ease-in-out group hover:bg-black">
                         <img src={ARROW1} alt="arrow1" className="h-6 w-6 mr-[-10px] mt-1.5 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
                         <img src={ARROW2} alt="arrow2" className="h-6 w-6 mt-[-2px] transition duration-300 ease-in-out group-hover:filter group-hover:invert" />    
