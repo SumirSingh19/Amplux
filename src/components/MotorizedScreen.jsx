@@ -22,6 +22,8 @@ import PHOTO20 from "../assets/images/motor20.png";
 import PHOTO21 from "../assets/images/motor21.png";
 import PHOTO22 from "../assets/images/motor22.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import MenuComponent from "./MenuComponent";
 
 const MotorizedScreen = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,11 +38,11 @@ const MotorizedScreen = () => {
 
     return (
         <div className="relative w-full h-full font-abel">
-            <div className="flex justify-between p-4 z-20">
+            <header className="flex justify-between p-4 z-20">
                 <div className="w-40">
                     <img src={LOGO} alt="Ampluxe Logo" className="w-full" />
                 </div>
-                <div className="flex gap-5 h-[4.5rem] p-4 z-20">
+                <div className="flex gap-5 h-[4.5rem] p-4 z-30">
                     <div 
                         className="flex items-center rounded-full text-base font-roboto font-normal p-6 py-[0.4rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
@@ -51,9 +53,19 @@ const MotorizedScreen = () => {
                             <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
-                    <span className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white">CONTACT</span>
+                    
+                    <Link to={"/contact"} className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white transition duration-300 ease-in-out">
+                        <span >CONTACT</span>
+                    </Link>
                 </div>
-            </div>
+                <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                    <MenuComponent />
+                </div>
+            </header>
+
+            {/* Overlay */}
+            <div className={`fixed inset-0 bg-black transition-opacity duration-500 ${isMenuOpen ? 'opacity-50 z-10' : 'opacity-0 pointer-events-none'}`}></div>
+            
             <div className="flex flex-col items-center font-abel gap-48">
                 <div className="text-8xl text-[#343531] w-2/5 text-center">
                     <span>Fixed Projector Screens</span>

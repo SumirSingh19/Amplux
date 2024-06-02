@@ -2,6 +2,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LOGO from "../assets/images/ampluxe.png";
 import PHOTO2 from "../assets/images/panel1.png";
+import MenuComponent from "./MenuComponent";
 
 const FlatPanelDisplay = () => {
     const [activeTab, setActiveTab] = useState('features');
@@ -23,11 +24,11 @@ const FlatPanelDisplay = () => {
     
     return (
         <div className="flex flex-col font-abel">
-            <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
-                <div className="w-48">
-                    <img src={LOGO} alt="Logo" className="w-full" />
+            <header className="flex justify-between p-4 z-20">
+                <div className="w-40">
+                    <img src={LOGO} alt="Ampluxe Logo" className="w-full" />
                 </div>
-                <div className="flex gap-5 h-[4.5rem] p-4 z-10">
+                <div className="flex gap-5 h-[4.5rem] p-4 z-30">
                     <div 
                         className="flex items-center rounded-full text-base font-roboto font-normal p-6 py-[0.4rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
@@ -38,9 +39,19 @@ const FlatPanelDisplay = () => {
                             <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
-                    <span className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white">CONTACT</span>
+                    
+                    <Link to={"/contact"} className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white transition duration-300 ease-in-out">
+                        <span >CONTACT</span>
+                    </Link>
                 </div>
-            </div>
+                <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                    <MenuComponent />
+                </div>
+            </header>
+
+            {/* Overlay */}
+            <div className={`fixed inset-0 bg-black transition-opacity duration-500 ${isMenuOpen ? 'opacity-70 z-10' : 'opacity-0 pointer-events-none'}`}></div>
+
             <div className="flex flex-col items-center pt-52 text-center">
                 <div className="px-32">
                     <span className="text-9xl">Interactive Flat Panel display</span>

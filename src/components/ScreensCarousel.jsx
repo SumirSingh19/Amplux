@@ -9,6 +9,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion"
+import { Link } from "react-router-dom";
 
 const ScreenCarousel1 = () => {
 //   useEffect(() => {
@@ -102,6 +103,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
       <div ref={targetRef} className="flex relative items-center justify-start gap-8 overflow-x-auto w-full hide-scrollbar" data-aos="zoom-in">
 
        <motion.div style={{x}}>
+        <Link to={"/Flat-Panel-Display"}>
         <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
           <div>
             <img src={PHOTO2} alt="" className="w-[30rem] h-[30rem] p-2 hover:scale-110 transition duration-700" />
@@ -118,6 +120,9 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
             </div>
           </div>
         </div>
+        </Link>
+
+        <Link to={"/projector-screens"}>
         <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
           <div>
             <img src={PHOTO1} alt="" className="w-[30rem] h-[30rem] hover:scale-110 transition duration-700" />
@@ -134,6 +139,9 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
             </div>
           </div>
         </div>
+        </Link>
+
+        <Link to={"/Active-LED-Display"}>
         <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
           <div>
             <img src={PHOTO3} alt="" className="w-[35rem] h-[30rem] p-3 hover:scale-110 transition duration-700" />
@@ -149,6 +157,9 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
             </div>
           </div>
         </div>
+        </Link>
+
+        <Link to={"/All-In-One-LED"}>
         <div className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
           <div>
             <img src={PHOTO4} alt="" className="w-[30rem] h-[30rem] pt-1 hover:scale-110 transition duration-700" />
@@ -164,6 +175,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
             </div>
           </div>
         </div>
+        </Link>
 
         </motion.div>
 

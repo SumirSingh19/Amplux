@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BG from "../assets/images/gradient.jpg";
 
 const Footer = () => {
@@ -19,18 +20,18 @@ const Footer = () => {
                     </div>
                     <div className="text-2xl pt-10 pl-[24rem]">
                         <ul>
-                            <li className="cursor-pointer section-link">Products</li>
-                            <li className="cursor-pointer section-link">Active LED Displays</li>
-                            <li className="cursor-pointer section-link">All-in-One LED Displays</li>
-                            <li className="cursor-pointer section-link">Interactive Flat Panel Display</li>
-                            <li className="cursor-pointer section-link">Projector Screens</li>
+                        <Link to={"products"}><li className="cursor-pointer section-link">Products</li></Link>
+                        <Link to={"/Active-LED-Display"}><li className="cursor-pointer section-link">Active LED Displays</li></Link>
+                        <Link to={"/All-In-One-LED"}><li className="cursor-pointer section-link">All-in-One LED Displays</li></Link>
+                        <Link to={"/Flat-Panel-Display"}><li className="cursor-pointer section-link">Interactive Flat Panel Display</li></Link>
+                        <Link to={"/projector-screens"}><li className="cursor-pointer section-link">Projector Screens</li></Link>
                         </ul>
                     </div>
                     <div className="text-2xl pr-64 pt-10">
                         <ul>
-                            <li className="cursor-pointer section-link">Home</li>
-                            <li className="cursor-pointer section-link">About</li>
-                            <li className="cursor-pointer section-link">Contact</li>
+                        <Link to={"/"}><li className="cursor-pointer section-link">Home</li></Link>
+                        <Link to={"about"}><li className="cursor-pointer section-link">About</li></Link>
+                        <Link to={"contact"}><li className="cursor-pointer section-link">Contact</li></Link>
                         </ul>
                     </div>
                 </div>

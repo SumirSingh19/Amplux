@@ -67,7 +67,7 @@ const Featured = () => {
             <div className="infinite-scroll-container" ref={scrollContainerRef}>
                 <div className="scroll-wrapper">
                     {items.concat(items).map((item, index) => (
-                        <div key={index} className="scroll-item w-[29rem] h-[30rem] bg-white p-4 pb-10 hover:scale-95 transition duration-500 rounded-3xl cursor-pointer">
+                        <div key={index} className="scroll-item w-[29rem] h-[30rem] bg-white p-4 pb-10 hover:scale-95 transition duration-500 tracking rounded-3xl cursor-pointer">
                             <div className="pt-5 px-2">
                                 <span className="text-4xl">{item.title}</span>
                             </div>
