@@ -21,6 +21,7 @@ import FRAME_16 from "../assets/images/wp_slider_v_001-1-46.webp";
 import FRAME_17 from "../assets/images/wp_slider_v_001-1-49.webp";
 import FRAME_18 from "../assets/images/wp_slider_v_001-1-52.webp";
 import ScrollAnimation from "./ScrollAnimation";
+import { Link } from "react-router-dom";
 
 const ScreenSolutions = () => {
   useEffect(() => {
@@ -43,10 +44,12 @@ const ScreenSolutions = () => {
         <div className="flex flex-col mt-36 mr-[-150px] z-10">
           <span className="text-5xl">Screen Solutions</span>
           <span className="text-md pt-1">Check out digital screen solutions</span>
+          <Link to={"/products"}>
           <button className="flex items-center w-24 justify-between text-xs rounded-full bg-[#B0B0B0] py-1 px-2 p-3 mt-6 hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-[#888686] transition duration-700 group">
             <span className="p-1 pl-2 font-semibold group-hover:text-white">Learn More</span>
             <img src={ARROW_UP} alt="arrow-icon" className="w-4 mt-1 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
           </button>
+          </Link>
         </div>
         <div className="">
           <ScrollAnimation frames={frames} />
