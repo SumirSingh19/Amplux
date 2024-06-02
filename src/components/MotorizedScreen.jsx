@@ -1,6 +1,4 @@
 import LOGO from "../assets/images/ampluxe.png";
-import ARROW1 from "../assets/icons/arrow1.png";
-import ARROW2 from "../assets/icons/arrow2.png";
 import PHOTO1 from "../assets/images/motor1.png";
 import PHOTO2 from "../assets/images/motor2.png";
 import PHOTO3 from "../assets/images/motor3.png";
@@ -54,10 +52,6 @@ const MotorizedScreen = () => {
                         </div>
                     </div>
                     <span className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white">CONTACT</span>
-                    <div className="flex rounded-full pr-5 px-3 pt-1 cursor-pointer bg-black">
-                        <img src={ARROW1} alt="arrow1" className="h-6 w-6 mr-[-10px] mt-1.5 filter invert" />
-                        <img src={ARROW2} alt="arrow2" className="h-6 w-6 mt-[-2px] filter invert" />    
-                    </div>
                 </div>
             </div>
             <div className="flex flex-col items-center font-abel gap-48">

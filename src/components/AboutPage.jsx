@@ -1,6 +1,4 @@
 import LOGO from "../assets/images/ampluxe.png";
-import ARROW1 from "../assets/icons/arrow1.png";
-import ARROW2 from "../assets/icons/arrow2.png";
 import INTRO_VIDEO from "../assets/videos/2.mp4";
 import PHOTO1 from "../assets/images/about1.png";
 import PHOTO2 from "../assets/images/about2.png";
@@ -39,10 +37,6 @@ const AboutPage = () => {
                         </div>
                     </div>
                     <span className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white">CONTACT</span>
-                    <div className="flex rounded-full pr-5 px-3 pt-1 cursor-pointer bg-black">
-                        <img src={ARROW1} alt="arrow1" className="h-6 w-6 mr-[-10px] mt-1.5 filter invert" />
-                        <img src={ARROW2} alt="arrow2" className="h-6 w-6 mt-[-2px] filter invert" />    
-                    </div>
                 </div>
                 <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                     <MenuComponent />

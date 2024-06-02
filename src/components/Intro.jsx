@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import INTRO_VIDEO from "../assets/videos/2.mp4";
 import LOGO from "../assets/images/ampluxe.png";
-import ARROW1 from "../assets/icons/arrow1.png";
-import ARROW2 from "../assets/icons/arrow2.png";
 import MenuComponent from "./MenuComponent";
 import { Link } from 'react-router-dom';
 
@@ -40,10 +38,6 @@ const Intro = () => {
                     <Link to={"contact"} className="rounded-full bg-white text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer hover:bg-black hover:text-white transition duration-300 ease-in-out">
                         <span >CONTACT</span>
                     </Link>
-                    <div className="flex rounded-full bg-white pr-5 px-3 pt-1 cursor-pointer transition duration-300 ease-in-out group hover:bg-black">
-                        <img src={ARROW1} alt="arrow1" className="h-6 w-6 mr-[-10px] mt-1.5 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
-                        <img src={ARROW2} alt="arrow2" className="h-6 w-6 mt-[-2px] transition duration-300 ease-in-out group-hover:filter group-hover:invert" />    
-                    </div>
                 </div>
             </div>
             <div className="w-full h-screen" style={{ opacity: videoOpacity }}>
