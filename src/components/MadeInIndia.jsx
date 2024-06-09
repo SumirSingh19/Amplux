@@ -15,7 +15,7 @@ const MadeInIndia = () => {
         // Animate each word in the first span sequentially
         words1.forEach((word, index) => {
             word.style.animationDelay = `${index * 0.5}s`;
-            word.classList.add('animate');
+            word.classList.add('animate-word');
         });
 
         // Hide the second span initially
@@ -27,7 +27,7 @@ const MadeInIndia = () => {
                 textRef2.current.style.opacity = 1;
                 words2.forEach((word, index) => {
                     word.style.animationDelay = `${index * 0.5}s`;
-                    word.classList.add('animate');
+                    word.classList.add('animate-word');
                 });
             }, words1.length * 500); // Delay for the second span
 
@@ -37,14 +37,14 @@ const MadeInIndia = () => {
     }, [firstVisit]);
 
     return (
-        <div className="font-abel bg-[#f7f2f2] flex flex-col items-center">
+        <div className="font-abel bg-[#f7f2f2] flex flex-col items-center sm:pt-20 pt-0">
             <div className="w-11/12 flex flex-col items-center" data-aos = "zoom-in-up">
             <img src={MADE_IN_INDIA} alt="made in india logo" className='w-full rounded-2xl' />
             </div>
             <div>
-                <div className="flex flex-col items-center pt-16">
+                <div className="flex flex-col items-center pt-16 sm:pt-1">
                     <div className="reveal-container">
-                        <span ref={textRef1} className="text-6xl pb-5">
+                        <span ref={textRef1} className="text-6xl sm:text-xl pb-5 sm:pb-0">
                             <span className="animated-word">Proudly</span>{' '}
                             <span className="animated-word">Made</span>{' '}
                             <span className="animated-word">In</span>{' '}
@@ -52,9 +52,9 @@ const MadeInIndia = () => {
                         </span>
                     </div>
                 </div>
-                <div className="w-10/12 text-center pl-44">
+                <div className="w-10/12 text-center pl-44 sm:pl-16">
                     <div className="reveal-container">
-                        <span ref={textRef2} className="text-xl font-roboto text-[#4D4D4D] tracking-wider">
+                        <span ref={textRef2} className="text-xl sm:text-[0.5rem] font-roboto text-[#4D4D4D] tracking-wider sm:leading-[0.1rem] sm:tracking-tight">
                             <span className="animated-word">Our</span>{' '}
                             <span className="animated-word">Screens</span>{' '}
                             <span className="animated-word">And</span>{' '}

@@ -66,7 +66,7 @@ const Contact = () => {
         <div ref={sectionRef} className="flex flex-col bg-[#f7f2f2] p-6 font-abel">
             <div className="mb-6 txt-left">
                 <div className='w-10/12 tracking-widest'>
-                    <span className="text-9xl">{typedText}</span>
+                    <span className="text-9xl sm:text-3xl">{typedText}</span>
                 </div>
             </div>
             <div className="w-full max-w-md"
@@ -85,7 +85,7 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
+                                className="w-[20rem] sm:w-[10rem] p-1 sm:p-[0.1rem] rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                             />
                         </div>
                         <div>
@@ -97,7 +97,7 @@ const Contact = () => {
                                 value={formData.phone}
                                 onChange={handleChange}
                                 required
-                                className="w-[20rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
+                                className="w-[20rem] sm:w-[10rem] p-1 sm:p-[0.1rem] rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                             />
                         </div>
                     </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-[41rem] p-1 rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
+                            className="w-[41rem] sm:w-[21rem] p-1 sm:p-[0.1rem] rounded-full border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2 px-3"
                         />
                     </div>
                     <div>
@@ -121,7 +121,7 @@ const Contact = () => {
                             value={formData.message}
                             onChange={handleChange}
                             required
-                            className="w-[41rem] p-1 h-40 rounded-lg border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
+                            className="w-[41rem] sm:w-[21rem] p-1 sm:p-[0.1rem] h-40 sm:h-28 rounded-lg border border-gray-600 bg-[#f7f2f2] focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder:text-gray-600 placeholder:text-xs placeholder:p-2"
                             rows="4"
                         ></textarea>
                     </div>
@@ -133,16 +133,16 @@ const Contact = () => {
                             checked={formData.agreement}
                             onChange={handleChange}
                             required
-                            className="rounded-checkbox"
+                            className="rounded-checkbox sm:ml-1"
                         />
-                        <label htmlFor="agreement" className="ml-2 text-sm">
+                        <label htmlFor="agreement" className="ml-2 text-sm sm:text-xs sm:ml-[0.02rem]">
                             I have read and accept the <span className='underline cursor-pointer'>privacy policy</span>
                         </label>
                     </div>
                     <div>
                         <button
                             type="submit"
-                            className="w-[10rem] p-2 bg-[#626365] text-white rounded-full hover:bg-[#717275] focus:outline-none focus:ring-2 focus:ring-[#626365]
+                            className="w-[10rem] sm:w-[5rem] p-2 sm:p-0.5 sm:text-[0.6`rem] sm:ml-1 bg-[#626365] text-white rounded-full hover:bg-[#717275] focus:outline-none focus:ring-2 focus:ring-[#626365]
                             hover:text-white hover:shadow-[inset_11rem_0_0_0] hover:shadow-[#454647] hover:scale-90 transition duration-700"
                         >
                             Send

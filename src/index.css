@@ -230,6 +230,13 @@
   perspective: 900px;
 }
 
+@media (max-width: 767.98px) {
+  .isometric-container {
+    gap: 0;
+  }
+  
+}
+
 .isometric-card {
   position: relative;
   width: 400px;
@@ -238,6 +245,15 @@
   transform: rotateX(43deg) rotateZ(-45deg) rotateY(4deg) translateX(0) translateY(0); /* Adjust z-rotation */
   transition: transform 0.4s, margin-top 0.4s;
   z-index: 3; /* Ensure Photo1 is on top */
+}
+
+@media (max-width: 767.98px) {
+  .isometric-card {
+    padding: 0.5rem;
+    width: 300px;
+    height: 178px;
+    transform: rotateX(45deg) rotateZ(-45deg) rotateY(4deg) translateX(0) translateY(0);
+  }
 }
 
 .isometric-card:nth-child(2) {

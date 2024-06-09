@@ -9,7 +9,7 @@ const Footer = () => {
             
             <div className="relative z-10 flex flex-col left-0">
                 <div className="flex justify-between py-8 p-5">
-                    <div className="pr-10 text-xs py-24 opacity-80">
+                    <div className="pr-10 text-xs sm:text-[0.5rem] py-24 sm:py-10 opacity-80 sm:leading-3">
                         <ul>
                             <li className="cursor-pointer section-link">LinkedIn</li>
                             <li className="cursor-pointer section-link">X</li>
@@ -18,7 +18,7 @@ const Footer = () => {
                             <li className="cursor-pointer section-link">YouTube</li>
                         </ul>
                     </div>
-                    <div className="text-2xl pt-10 pl-[24rem]">
+                    <div className="text-2xl sm:text-xs pt-10 sm:pt-3 pl-[24rem] sm:pl-[0.5rem]">
                         <ul>
                         <Link to={"products"}><li className="cursor-pointer section-link">Products</li></Link>
                         <Link to={"/Active-LED-Display"}><li className="cursor-pointer section-link">Active LED Displays</li></Link>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <Link to={"/projector-screens"}><li className="cursor-pointer section-link">Projector Screens</li></Link>
                         </ul>
                     </div>
-                    <div className="text-2xl pr-64 pt-10">
+                    <div className="text-2xl sm:text-xs pr-64 sm:pr-2 pt-10 sm:pt-3">
                         <ul>
                         <Link to={"/"}><li className="cursor-pointer section-link">Home</li></Link>
                         <Link to={"about"}><li className="cursor-pointer section-link">About</li></Link>
@@ -35,7 +35,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex gap-[32.5rem] items-center p-5 pb-7 font-light text-xs opacity-70">
+                <div className="flex gap-[32.5rem] sm:gap-[1rem] items-center p-5 pb-7 sm:pb-2 font-light text-xs sm:text-[0.5rem] opacity-70">
                     <div>
                         <span>© 2024 Amplux. All rights reserved.</span>
                     </div>

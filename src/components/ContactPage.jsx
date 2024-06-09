@@ -65,24 +65,24 @@ const ContactPage = () => {
 
     return (
         <div className="w-full h-full font-abel">
-            <header className="flex justify-between p-4 z-20">
-                <div className="w-40">
+            <header className="flex justify-between p-4 sm:p-0.5 z-20">
+                <div className="w-40 sm:w-20">
                     <img src={LOGO} alt="Ampluxe Logo" className="w-full" />
                 </div>
-                <div className="flex gap-5 h-[4.5rem] p-4 z-30">
-                    <div 
-                        className="flex items-center rounded-full text-base font-roboto font-normal p-6 py-[0.4rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white"
+                <div className="flex gap-5 h-[4.5rem] sm:h-[2rem] p-4 sm:p-2 sm:gap-2 z-30">
+                <div 
+                        className="flex items-center rounded-full  text-base font-roboto font-normal p-6 sm:p-2 py-[0.4rem] sm:y-[0.2rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white group"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
                     >
-                        <span className="mr-2 text-white">MENU</span>
-                        <div className={`transition-transform duration-300 flex flex-col gap-1 ${isMenuOpen ? 'gap-[0.5px] w-2 py-10' : ''}`}>
-                            <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? 'rotate-45' : ''}`}></span>
-                            <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
+                        <span className="mr-2 sm:mr-1 text-white sm:text-[0.4rem]">MENU</span>
+                        <div className={`transition-transform duration-300 flex flex-col gap-1 sm:gap-[0.1rem] ${isMenuOpen ? 'gap-[0.5px] w-2 py-10 sm:w-1 sm:py-2 sm:gap-[0.2px]' : ''}`}>
+                            <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-white transition duration-500 ease-in-out ${isMenuOpen ? 'rotate-45' : ''}`}></span>
+                            <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-white transition duration-500 ease-in-out ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
                     
-                    <Link to={"/contact"} className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white transition duration-300 ease-in-out">
-                        <span >CONTACT</span>
+                    <Link to={"contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
+                        <span className="rounded-full text-base px-3 py-2 pb-3 sm:p-1 font-roboto font-normal  cursor-pointer bg-black text-white transition duration-300 ease-in-out sm:text-[0.45rem]">CONTACT</span>
                     </Link>
                 </div>
                 <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
@@ -94,15 +94,15 @@ const ContactPage = () => {
             <div className={`fixed inset-0 bg-black transition-opacity duration-500 ${isMenuOpen ? 'opacity-50 z-10' : 'opacity-0 pointer-events-none'}`}></div>
 
             <main className="flex flex-col items-center">
-                <div className="w-1/3 text-center flex">
-                    <span className="text-9xl uppercase">Lets Connect</span>
+                <div className="w-1/3 sm:mr-9 text-center flex">
+                    <span className="text-9xl sm:text-4xl uppercase">Lets Connect</span>
                 </div>
-                <div className='flex items-center gap-20'>
-                    <div className="flex p-8 shadow-md mt-10 border border-[#070707] rounded-xl mb-36">
-                        <form onSubmit={handleSubmit} className="w-[38rem] font-roboto">
+                <div className='flex sm:flex-col items-center gap-20'>
+                    <div className="flex p-8 sm:p-4 shadow-md mt-10 border border-[#070707] rounded-xl mb-36 sm:mb-16">
+                        <form onSubmit={handleSubmit} className="w-[38rem] sm:w-[19rem] font-roboto">
                             <div className="flex gap-4">
-                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="firstName">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem] sm:w-[9rem]">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold flex gap-1" htmlFor="firstName">
                                         <span>Name</span>
                                         <span className="text-red-600">*</span>
                                     </label>
@@ -113,12 +113,12 @@ const ContactPage = () => {
                                         placeholder="XYZ" 
                                         value={formData.firstName} 
                                         onChange={handleChange} 
-                                        className="w-full border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        className="w-full border-b-2 border-[#888888] text-xs pt-1 sm:pt-0 placeholder:text-xs"
                                         required
                                     />
                                 </div>
-                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="lastName">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem] sm:w-[9rem]">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold flex gap-1" htmlFor="lastName">
                                         <span>Last Name</span>
                                         <span className="text-red-600">*</span>
                                     </label>
@@ -129,15 +129,15 @@ const ContactPage = () => {
                                         placeholder="ABC"
                                         value={formData.lastName} 
                                         onChange={handleChange} 
-                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        className="border-b-2 border-[#888888] text-xs sm:text-[0.72rem] pt-1 sm:pt-0 placeholder:text-xs sm:placeholder:sm:text-[0.72rem]"
                                         required
                                     />
                                 </div>
                             </div>
 
                             <div className="flex gap-4 pt-2">
-                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="company">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem] sm:w-[9rem]">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold flex gap-1" htmlFor="company">
                                         <span>Company</span>
                                         <span className="text-red-600">*</span>
                                     </label>
@@ -148,12 +148,12 @@ const ContactPage = () => {
                                         placeholder="Nome Azienda" 
                                         value={formData.company} 
                                         onChange={handleChange} 
-                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        className="border-b-2 border-[#888888] text-xs sm:text-[0.72rem] pt-1 sm:pt-0 placeholder:text-xs sm:placeholder:sm:text-[0.72rem]"
                                         required
                                     />
                                 </div>
-                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem]">
-                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="role">
+                                <div className="mb-4 flex flex-col gap-2 w-[18.5rem] sm:w-[9rem]">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold flex gap-1" htmlFor="role">
                                         <span>Role</span>
                                         <span className="text-red-600">*</span>
                                     </label>
@@ -164,14 +164,14 @@ const ContactPage = () => {
                                         placeholder="Es. Market manager" 
                                         value={formData.role} 
                                         onChange={handleChange} 
-                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        className="border-b-2 border-[#888888] text-xs sm:text-[0.72rem] pt-1 sm:pt-0 placeholder:text-xs sm:placeholder:sm:text-[0.72rem]"
                                         required
                                     />
                                 </div>
                             </div>                    
                             
-                            <div className="mb-4 w-[38rem] flex flex-col gap-2">
-                                <label className="text-gray-700 text-sm font-bold" htmlFor="website">
+                            <div className="mb-4 w-[38rem] sm:w-[19rem] flex flex-col gap-2">
+                                <label className="text-gray-700 text-sm sm:text-xs font-bold" htmlFor="website">
                                     Website
                                 </label>
                                 <input 
@@ -181,14 +181,13 @@ const ContactPage = () => {
                                         placeholder="www.example.com" 
                                         value={formData.website} 
                                         onChange={handleChange} 
-                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
-                                        required
+                                        className="border-b-2 border-[#888888] text-xs sm:text-[0.72rem] pt-1 sm:pt-0 placeholder:text-xs sm:placeholder:sm:text-[0.72rem]"
                                 />
                             </div>
 
                             <div className="flex gap-4">
-                                <div className="flex flex-col gap-2 w-[18.5rem]">
-                                    <label className="text-gray-700 text-sm font-bold flex gap-1" htmlFor="email">
+                                <div className="flex flex-col gap-2 w-[18.5rem] sm:w-[9rem]">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold flex gap-1" htmlFor="email">
                                         <span>Email</span>
                                         <span className="text-red-600">*</span>
                                     </label>
@@ -199,40 +198,39 @@ const ContactPage = () => {
                                         placeholder="example@email.com"
                                         value={formData.email} 
                                         onChange={handleChange} 
-                                        className="border-b-2 border-[#888888] text-xs pt-1 placeholder:text-xs"
+                                        className="border-b-2 border-[#888888] text-xs sm:text-[0.72rem] pt-1 sm:pt-0 placeholder:text-xs sm:placeholder:sm:text-[0.72rem]"
                                         required
                                     />
                                 </div>
-                                <div className="flex flex-col gap-2 w-[18.5rem] relative">
-                                    <label className="text-gray-700 text-sm font-bold" htmlFor="phone">
+                                <div className="flex flex-col gap-2 w-[18.5rem] sm:w-[9rem] relative">
+                                    <label className="text-gray-700 text-sm sm:text-xs font-bold" htmlFor="phone">
                                         Phone no.
                                     </label>
                                     <input
                                         mask="+91 9999999999"
                                         value={formData.phone}
                                         onChange={handlePhoneChange}
-                                        className="border-b-2 border-[#888888] pl-12 text-xs pt-1"
-                                        required
+                                        className="border-b-2 border-[#888888] pl-12 text-xs pt-1 sm:pt-0"
                                     />
-                                    <span className="absolute pt-1 top-7 text-xs text-[#161616]">+91 </span>
+                                    <span className="absolute pt-1 sm:pt-0 top-7 text-xs sm:text-[0.72rem] text-[#161616]">+91 </span>
                                 </div>
                             </div>
 
-                            <div className="py-10 flex flex-col gap-1">
+                            <div className="py-10 flex flex-col gap-1 sm:w-11/12">
                                 <div>
                                     <span className="font-semibold">Purpose</span>
                                 </div>
-                                <ul className="flex flex-wrap gap-2">
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Collaboration</li>
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Marketplace</li>
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Distribution</li>
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Payment</li>
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Business</li>
-                                    <li className="border border-black py-2 px-8 text-xs rounded-full font-medium">Other</li>
+                                <ul className="flex flex-wrap gap-2 sm:gap-1">
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Collaboration</li>
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Marketplace</li>
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Distribution</li>
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Payment</li>
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Business</li>
+                                    <li className="border border-black py-1 px-8 sm:px-5 text-xs sm:text-[0.62rem] rounded-full font-medium">Other</li>
                                 </ul>
                             </div>
                             
-                            <div className="mb-4 w-[38rem] flex flex-col relative">
+                            <div className="mb-4 w-[38rem] sm:w-[19rem] flex flex-col relative">
                                 <label className="text-gray-700 text-sm font-bold" htmlFor="message">
                                     Custom Message
                                 </label>
@@ -242,13 +240,12 @@ const ContactPage = () => {
                                     value={formData.message} 
                                     onChange={handleChange} 
                                     className="h-[12rem] border-b border-[#888888]"
-                                    required
                                 ></textarea>
                                 <span className="absolute bottom-2 right-2 text-sm text-gray-500">{messageCharCount}/500</span>
                             </div>
 
-                            <div className="flex justify-center">
-                                <button type="submit" className="text-white bg-[#292639] py-3 px-[18rem] font-roboto rounded-full text-[0.8rem] uppercase hover:bg-[#4D4D4D] hover:scale-x-95 transition duration-500">
+                            <div className="flex justify-center sm:justify-normal">
+                                <button type="submit" className="text-white bg-[#292639] py-3 px-[18rem] sm:px-[8.5rem] font-roboto rounded-full text-[0.8rem] sm:text-[0.6rem] uppercase hover:bg-[#4D4D4D] hover:scale-x-95 transition duration-500">
                                     Submit
                                 </button>
                             </div>

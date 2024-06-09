@@ -47,7 +47,7 @@ const ScrollAnimation = ({ frames }) => {
   }, [inView, entry, frames]);
 
   return (
-    <div ref={ref} className="relative w-[69rem] h-[42rem]">
+    <div ref={ref} className="relative w-[69rem] sm:w-[20rem] h-[42rem] sm:h-[12rem]">
       {frames.map((frame, index) => (
         <img
           key={index}

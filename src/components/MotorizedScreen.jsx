@@ -38,24 +38,24 @@ const MotorizedScreen = () => {
 
     return (
         <div className="relative w-full h-full font-abel">
-            <header className="flex justify-between p-4 z-20">
-                <div className="w-40">
+            <header className="flex justify-between p-4 sm:p-0.5 z-20">
+                <div className="w-40 sm:w-20">
                     <img src={LOGO} alt="Ampluxe Logo" className="w-full" />
                 </div>
-                <div className="flex gap-5 h-[4.5rem] p-4 z-30">
-                    <div 
-                        className="flex items-center rounded-full text-base font-roboto font-normal p-6 py-[0.4rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white"
+                <div className="flex gap-5 h-[4.5rem] sm:h-[2rem] p-4 sm:p-2 sm:gap-2 z-30">
+                <div 
+                        className="flex items-center rounded-full  text-base font-roboto font-normal p-6 sm:p-2 py-[0.4rem] sm:y-[0.2rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white group"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
                     >
-                        <span className="mr-2 text-white">MENU</span>
-                        <div className={`transition-transform duration-300 flex flex-col gap-1 ${isMenuOpen ? 'gap-[0.5px] w-2 py-10' : ''}`}>
-                            <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? 'rotate-45' : ''}`}></span>
-                            <span className={`block w-5 h-[0.1rem] bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
+                        <span className="mr-2 sm:mr-1 text-white sm:text-[0.4rem]">MENU</span>
+                        <div className={`transition-transform duration-300 flex flex-col gap-1 sm:gap-[0.1rem] ${isMenuOpen ? 'gap-[0.5px] w-2 py-10 sm:w-1 sm:py-2 sm:gap-[0.2px]' : ''}`}>
+                            <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-white transition duration-500 ease-in-out ${isMenuOpen ? 'rotate-45' : ''}`}></span>
+                            <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-white transition duration-500 ease-in-out ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
                     
-                    <Link to={"/contact"} className="rounded-full text-base p-4 font-roboto font-normal py-[0.4rem] cursor-pointer bg-black text-white transition duration-300 ease-in-out">
-                        <span >CONTACT</span>
+                    <Link to={"contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
+                        <span className="rounded-full text-base px-3 py-2 pb-3 sm:p-1 font-roboto font-normal  cursor-pointer bg-black text-white transition duration-300 ease-in-out sm:text-[0.45rem]">CONTACT</span>
                     </Link>
                 </div>
                 <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
@@ -66,8 +66,8 @@ const MotorizedScreen = () => {
             {/* Overlay */}
             <div className={`fixed inset-0 bg-black transition-opacity duration-500 ${isMenuOpen ? 'opacity-50 z-10' : 'opacity-0 pointer-events-none'}`}></div>
             
-            <div className="flex flex-col items-center font-abel gap-48">
-                <div className="text-8xl text-[#343531] w-2/5 text-center">
+            <div className="flex flex-col items-center font-abel gap-48 sm:gap-20">
+                <div className="text-8xl sm:text-5xl text-[#343531] w-2/5 text-center">
                     <span>Fixed Projector Screens</span>
                 </div>
                 <div className="flex gap-8 flex-wrap px-24 pb-32">

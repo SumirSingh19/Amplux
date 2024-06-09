@@ -35,19 +35,20 @@ const ScreenSolutions = () => {
   ];
 
   return (
-    <div className="flex flex-col pt-24 bg-[#f7f2f2] font-abel">
-      <div className="flex text-center flex-col text-5xl font-light" data-aos="zoom-in-up">
+    <div className="flex flex-col pt-24 sm:pt-60 bg-[#f7f2f2] font-abel">
+      <div className="flex text-center flex-col text-5xl sm:text-xl font-light" data-aos="zoom-in-up">
         <span>Screen and projector solution</span>
         <span>for every application</span>
       </div>
-      <div className="flex items-center justify-center pl-44 pt-10" data-aos="zoom-in-up">
-        <div className="flex flex-col mt-36 mr-[-150px] z-10">
-          <span className="text-5xl">Screen Solutions</span>
-          <span className="text-md pt-1">Check out digital screen solutions</span>
+      <div className="flex items-center justify-center pl-44 sm:pl-20 pt-10" data-aos="zoom-in-up">
+        <div className="flex flex-col mt-36 sm:mt-3 mr-[-150px] sm:mr-[-10px] z-10">
+          <span className="text-5xl sm:text-sm">Screen Solutions</span>
+          <span className="text-md sm:text-[0.37rem] pt-1 sm:pt-0">Check out digital screen solutions</span>
           <Link to={"/products"}>
-          <button className="flex items-center w-24 justify-between text-xs rounded-full bg-[#B0B0B0] py-1 px-2 p-3 mt-6 hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-[#888686] transition duration-700 group">
-            <span className="p-1 pl-2 font-semibold group-hover:text-white">Learn More</span>
-            <img src={ARROW_UP} alt="arrow-icon" className="w-4 mt-1 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
+          <button className="flex items-center w-24 sm:w-9 justify-between text-xs sm:text-[0.3rem] rounded-full bg-[#B0B0B0] 
+          py-1 sm:py-0 px-2 p-3 sm:p-1 mt-6 sm:mt-2 hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-[#888686] transition duration-700 group">
+            <span className="p-1 sm:p-0 pl-2 font-semibold group-hover:text-white sm:leading-3 sm:tracking-tighter">Learn More</span>
+            <img src={ARROW_UP} alt="arrow-icon" className="w-4 sm:w-1.5 mt-1 sm:mt-0 transition duration-300 ease-in-out group-hover:filter group-hover:invert" />
           </button>
           </Link>
         </div>
