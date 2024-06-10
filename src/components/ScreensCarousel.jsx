@@ -43,29 +43,27 @@ const ScreenCarousel = () => {
   ];
 
   return (
-    <section ref={targetRef} className="relative sm:mt-[-160px] h-[300vh] -z-30">
+    <section ref={targetRef} className="sm:mt-[-160px] h-[300vh] -z-30">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-[#f7f2f2]">
-        <div className="flex gap-4 sm:gap-0 bg-[#f7f2f2]">
+        <motion.div style={{ x }} className="flex gap-4 sm:gap-0 bg-[#f7f2f2]">
           {cards.map((card, index) => (
             <Link to={card.link} key={index} className="flex-shrink-0 bg-white w-[45rem] h-[37rem] flex flex-col items-center pb-3 rounded-2xl cursor-pointer">
-              <motion.div style={{ x }}>
+              <div>
+                <img src={card.img} alt={card.title} className="w-[30rem] sm:w-[16rem] h-[30rem] sm:h-[16rem] pt-1 hover:scale-95 transition duration-700" />
+              </div>
+              <div className="p-3 pt-0 z-10">
                 <div>
-                  <img src={card.img} alt={card.title} className="w-[30rem] sm:w-[16rem] h-[30rem] sm:h-[16rem] pt-1 hover:scale-110 transition duration-700" />
+                  <span className="text-3xl sm:text-lg font-light">{card.title}</span>
                 </div>
-                <div className="p-3 pt-0 z-10">
-                  <div>
-                    <span className="text-3xl sm:text-lg font-light">{card.title}</span>
-                  </div>
-                  <div>
-                    <span className="text-base sm:text-xs tracking-wider sm:tracking-tighter sm:leading-3">
-                      {card.text}
-                    </span>
-                  </div>
+                <div>
+                  <span className="text-base sm:text-xs tracking-wider sm:tracking-tighter sm:leading-3">
+                    {card.text}
+                  </span>
                 </div>
-              </motion.div>
+              </div>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
