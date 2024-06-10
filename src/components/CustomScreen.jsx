@@ -19,13 +19,15 @@ const CustomScreen = () => {
 
     return (
         <div className="relative w-full h-full font-abel">
-            <header className="flex justify-between p-4 sm:p-0.5 z-20">
+            <header className="flex justify-between p-4 sm:p-0.5 z-40 fixed top-0 w-full bg-transparent bg-opacity-40 backdrop-blur-xl">
                 <div className="w-40 sm:w-20">
-                    <img src={LOGO} alt="Ampluxe Logo" className="w-full" />
+                    <Link to={"/"}>
+                        <img src={LOGO} alt="Logo" className="w-full" />
+                    </Link>
                 </div>
-                <div className="flex gap-5 h-[4.5rem] sm:h-[2rem] p-4 sm:p-2 sm:gap-2 z-30">
-                <div 
-                        className="flex items-center rounded-full  text-base font-roboto font-normal p-6 sm:p-2 py-[0.4rem] sm:y-[0.2rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white group"
+                <div className="flex gap-5 h-[4.5rem] sm:h-[2rem] p-4 sm:p-2 sm:gap-2">
+                    <div
+                        className="flex items-center rounded-full text-base font-roboto font-normal p-6 sm:p-2 py-[0.4rem] sm:py-[0.2rem] cursor-pointer transition duration-500 ease-in-out bg-black text-white group"
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
                     >
                         <span className="mr-2 sm:mr-1 text-white sm:text-[0.4rem]">MENU</span>
@@ -34,20 +36,14 @@ const CustomScreen = () => {
                             <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-white transition duration-500 ease-in-out ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
-                    
-                    <Link to={"contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
-                        <span className="rounded-full text-base px-3 py-2 pb-3 sm:p-1 font-roboto font-normal  cursor-pointer bg-black text-white transition duration-300 ease-in-out sm:text-[0.45rem]">CONTACT</span>
+
+                    <Link to={"/contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
+                        <span className="rounded-full text-base px-3 py-2 pb-3 sm:p-1 font-roboto font-normal cursor-pointer bg-black text-white transition duration-300 ease-in-out sm:text-[0.45rem]">CONTACT</span>
                     </Link>
-                </div>
-                <div className={`absolute top-0 left-0 w-full h-full z-20 transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                    <MenuComponent />
                 </div>
             </header>
 
-            {/* Overlay */}
-            <div className={`fixed inset-0 bg-black transition-opacity duration-500 ${isMenuOpen ? 'opacity-50 z-10' : 'opacity-0 pointer-events-none'}`}></div>
-
-            <div className="flex flex-col items-center">
+            <div className={`flex flex-col items-center ${isMenuOpen ? 'blurred backdrop-blur-md' : ''}`}>
                 <div className="text-8xl sm:text-5xl text-[#343531] w-3/5 text-center">
                     <span>Custom Projector Solutions</span>
                 </div>
@@ -84,6 +80,16 @@ const CustomScreen = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Overlay and Menu Component */}
+            {isMenuOpen && (
+                <div className="fixed inset-0 z-30">
+                    <div className="fixed inset-0 bg-black opacity-70" onClick={toggleMenu}></div>
+                    <div className="relative z-50">
+                        <MenuComponent />
+                    </div>
+                </div>
+            )}
         </div>
     )
 };

@@ -20,7 +20,7 @@ const Footer = () => {
                     </div>
                     <div className="text-2xl sm:text-xs pt-10 sm:pt-3 pl-[24rem] sm:pl-[0.5rem]">
                         <ul>
-                        <Link to={"products"}><li className="cursor-pointer section-link">Products</li></Link>
+                        <Link to={"/products"}><li className="cursor-pointer section-link">Products</li></Link>
                         <Link to={"/Active-LED-Display"}><li className="cursor-pointer section-link">Active LED Displays</li></Link>
                         <Link to={"/All-In-One-LED"}><li className="cursor-pointer section-link">All-in-One LED Displays</li></Link>
                         <Link to={"/Flat-Panel-Display"}><li className="cursor-pointer section-link">Interactive Flat Panel Display</li></Link>
@@ -30,8 +30,8 @@ const Footer = () => {
                     <div className="text-2xl sm:text-xs pr-64 sm:pr-2 pt-10 sm:pt-3">
                         <ul>
                         <Link to={"/"}><li className="cursor-pointer section-link">Home</li></Link>
-                        <Link to={"about"}><li className="cursor-pointer section-link">About</li></Link>
-                        <Link to={"contact"}><li className="cursor-pointer section-link">Contact</li></Link>
+                        <Link to={"/about"}><li className="cursor-pointer section-link">About</li></Link>
+                        <Link to={"/contact"}><li className="cursor-pointer section-link">Contact</li></Link>
                         </ul>
                     </div>
                 </div>

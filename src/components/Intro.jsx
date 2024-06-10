@@ -22,7 +22,9 @@ const Intro = () => {
         <div className="relative w-full h-full font-abel">
             <div className="absolute top-0 left-0 right-0 flex justify-between p-4 sm:p-0.5 z-20">
                 <div className="w-40 sm:w-20">
+                    <Link to={"/"}>
                     <img src={LOGO} alt="Logo" className="w-full" />
+                    </Link>
                 </div>
                 <div className="flex gap-5 h-[4.5rem] sm:h-[2rem] p-4 sm:p-2 sm:gap-2">
                     <div 
@@ -35,7 +37,7 @@ const Intro = () => {
                             <span className={`block w-5 sm:w-2 h-[0.1rem] sm:h-[0.01rem] bg-black transition duration-500 ease-in-out group-hover:bg-white ${isMenuOpen ? '-rotate-45' : ''}`}></span>
                         </div>
                     </div>
-                    <Link to={"contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
+                    <Link to={"/contact"} className='sm:mt-[-0.41rem] py-[0.4rem] sm:py-[0rem]'>
                         <span className="rounded-full bg-white text-base px-3 py-2 pb-3 sm:p-1 font-roboto font-normal  cursor-pointer hover:bg-black hover:text-white transition duration-300 ease-in-out sm:text-[0.45rem]">CONTACT</span>
                     </Link>
                 </div>

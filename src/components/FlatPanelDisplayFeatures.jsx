@@ -9,16 +9,16 @@ const FlatPanelDisplayFeatures = () => {
 
     return (
         <div className="flex flex-col gap-10">
-            <div className="pb-20 text-left">
-                <span className="text-8xl">Features</span>
+            <div className="pb-20 sm:pb-8 text-left">
+                <span className="text-8xl sm:text-5xl">Features</span>
             </div>
-            <div className="flex flex-col gap-36 pb-40">
+            <div className="flex flex-col gap-36 pb-40 sm:pb-10 sm:gap-10">
                 <div className="flex items-center gap-12">
                     <div className="flex flex-col gap-7 w-7/12">
                         <div className="w-5/12">
-                            <span className="text-7xl text-[#343531]">Wireless Collaboration</span>
+                            <span className="text-7xl sm:text-3xl text-[#343531]">Wireless Collaboration</span>
                         </div>
-                        <div className=" text-base text-left font-roboto tracking-wider">
+                        <div className=" text-base sm:text-[0.5rem] sm:tracking-tight sm:leading-3 text-left font-roboto tracking-wider">
                             <span>
                                 The ED series includes built-in wireless presentation and collaboration tools, 
                                 enabling cable-free and effortless presenting in classrooms or offices.
@@ -26,18 +26,18 @@ const FlatPanelDisplayFeatures = () => {
                         </div>
                     </div>
                     <div>
-                        <img src={COMP5} className="w-[32rem]" alt="" />
+                        <img src={COMP5} className="w-[32rem] sm:h-52" alt="" />
                     </div>
                 </div>
                 <div className="flex items-center gap-10">
                     <div>
-                        <img src={COMP6} className="w-[35rem]" alt="" />
+                        <img src={COMP6} className="w-[35rem] sm:h-52" alt="" />
                     </div>
-                    <div className="flex flex-col gap-10 w-7/12">
-                        <div className="text-7xl flex flex-col text-right pl-40 text-[#343531]">
+                    <div className="flex flex-col gap-10 w-7/12 sm:w-full">
+                        <div className="text-7xl sm:text-3xl flex flex-col text-right pl-40 sm:pl-1 text-[#343531]">
                             <span>Digital Whiteboard</span>
                         </div>
-                        <div className="text-base text-right pl-24 font-roboto">
+                        <div className="text-base sm:text-[0.5rem] sm:leading-3 text-right pl-24 sm:pl-1 font-roboto">
                             <span>
                                 The ED series features 20-point touch interaction and a digital whiteboard for smooth annotation, 
                                 highlighting, and screen capture for easy sharing. The panel is protected by 4mm thick, high-quality 
@@ -48,10 +48,10 @@ const FlatPanelDisplayFeatures = () => {
                 </div>
                 <div className="flex items-center gap-10">
                     <div className="flex flex-col gap-6 w-6/12">
-                        <div className="text-7xl text-left tracking-wider text-[#343531]">
+                        <div className="text-7xl sm:text-3xl text-left tracking-wider text-[#343531]">
                             <span>Google Play enabled</span>
                         </div>
-                        <div className="flex flex-col gap-2 text-left text-lg font-roboto">
+                        <div className="flex flex-col gap-2 text-left text-lg sm:text-[0.5rem] sm:tracking-tight sm:leading-3 font-roboto">
                             <span>
                                 Convenient access to any Google Play app enhances flexibility and optimizes 
                                 productivity for both work and teaching sessions.
@@ -59,18 +59,18 @@ const FlatPanelDisplayFeatures = () => {
                         </div>
                     </div>
                     <div>
-                        <img src={COMP7} className="w-[32rem] ml-20" alt="" />
+                        <img src={COMP7} className="w-[32rem] sm:h-52 ml-20 sm:ml-1" alt="" />
                     </div>
                 </div>
-                <div className="flex items-center gap-44">
+                <div className="flex items-center gap-44 sm:gap-6">
                     <div>
-                        <img src={COMP8} className="w-[34rem]" alt="" />
+                        <img src={COMP8} className="w-[34rem] sm:h-60" alt="" />
                     </div>
                     <div className="flex flex-col gap-6 w-7/12">
-                        <div className="text-7xl text-right text-[#343531]">
+                        <div className="text-7xl sm:text-3xl text-right text-[#343531]">
                             <span>4K UHD Resolution and rich connectivity</span>
                         </div>
-                        <div className="text-base pl-14 font-roboto text-right pb-3">
+                        <div className="text-base pl-14 sm:pl-1 sm:text-[0.5rem] sm:tracking-tight sm:leading-3 font-roboto text-right pb-3">
                             <span>
                                 The ED series offers display sizes of 65", 75", and 86", 
                                 featuring 4K Ultra-HD (3,840 x 2,160) resolution for exceptional detail 
@@ -83,10 +83,10 @@ const FlatPanelDisplayFeatures = () => {
                 </div>
                 <div className="flex items-center gap-6">
                     <div className="flex flex-col gap-6 w-6/12">
-                        <div className="text-7xl text-left text-[#343531]">
+                        <div className="text-7xl sm:text-3xl text-left text-[#343531]">
                             <span>Backlit D-LED Technology</span>
                         </div>
-                        <div className="flex flex-col gap-2 text-base w-11/12 tracking-wider pr-2 text-left font-roboto">
+                        <div className="flex flex-col gap-2 text-base sm:text-[0.5rem] sm:tracking-tight sm:leading-3 w-11/12 tracking-wider pr-2 sm:pr-0 text-left font-roboto">
                             <span>
                             The D-LED (IPS panel) with Optical Bonding technology features 
                             backlighting, ensuring brighter images, vibrant colors, enhanced 
@@ -98,18 +98,18 @@ const FlatPanelDisplayFeatures = () => {
                         </div>
                     </div>
                     <div>
-                        <img src={COMP9} className="w-[35rem] ml-20" alt="" />
+                        <img src={COMP9} className="w-[35rem] sm:h-60 ml-20 sm:ml-1" alt="" />
                     </div>
                 </div>
-                <div className="flex items-center gap-36">
+                <div className="flex items-center gap-36 sm:gap-5">
                     <div>
-                        <img src={COMP10} className="w-[33rem]" alt="" />
+                        <img src={COMP10} className="w-[33rem] sm:h-52" alt="" />
                     </div>
                     <div className="flex flex-col gap-6 w-6/12">
-                        <div className="text-7xl text-right text-[#343531]">
+                        <div className="text-7xl sm:text-3xl text-right text-[#343531]">
                             <span>Eye Protection Technology</span>
                         </div>
-                        <div className="text-base font-roboto text-right pl-10 pb-3">
+                        <div className="text-base sm:text-[0.5rem] sm:tracking-tight sm:leading-3 font-roboto text-right pl-10 pb-3">
                             <span>
                                 The ED series prioritizes eye protection by incorporating features like 
                                 low Blue Light and Flicker Free technology, ensuring an optimal viewing experience.
