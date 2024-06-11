@@ -18,15 +18,15 @@ const ScreenCarousel = () => {
   const cards = [
     {
       img: PHOTO1,
-      title: "Interactive Flat Panel Display",
-      text: "Versatile Projector Screens, Available In Both Motorized And Fixed Options, Enhancing Your Viewing Experience Across All Inch Categories: 65, 75, 86, And 98-Inch.",
-      link: "/Flat-Panel-Display"
-    },
-    {
-      img: PHOTO2,
       title: "Projector Screens",
       text: "Versatile Projector Screens, Available In Both Motorized And Fixed Options, Enhancing Your Viewing Experience.",
       link: "/projector-screens"
+    },
+    {
+      img: PHOTO2,
+      title: "Interactive Flat Panel Display",
+      text: "Versatile Projector Screens, Available In Both Motorized And Fixed Options, Enhancing Your Viewing Experience Across All Inch Categories: 65, 75, 86, And 98-Inch.",
+      link: "/Flat-Panel-Display"
     },
     {
       img: PHOTO3,
