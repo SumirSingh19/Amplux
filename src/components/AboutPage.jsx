@@ -22,7 +22,7 @@ const AboutPage = () => {
 
     return (
         <div className="relative w-full h-full font-abel">
-            <header className="flex justify-between p-4 sm:p-0.5 z-40 fixed top-0 w-full bg-transparent bg-opacity-40 backdrop-blur-xl">
+            <header className="flex justify-between p-4 sm:p-0.5 z-40 fixed top-0 w-full bg-transparent bg-opacity-40">
                 <div className="w-40 sm:w-20">
                     <Link to={"/"}>
                         <img src={LOGO} alt="Logo" className="w-full" />
